@@ -1,4 +1,10 @@
+header{
+    display: flex;
+}
 
+li .nav-toggle-link{
+    text-decoration: none;
+}
 
 .attribution { 
     font-size: 11px; text-align: center; 

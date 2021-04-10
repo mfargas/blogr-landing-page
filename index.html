@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link type="css/stylesheet" type="text" href="index.css">
   
   <title>Frontend Mentor | [Blogr]</title>
 
@@ -13,40 +14,51 @@
 </head>
 <body>
 <div class="container-fluid">
-  <div class="navbar">
+  <header class="navbar">
+    <a class="navbar-logo">Blogr</a>
     <nav class="navbar-left">
-      <li>Product</li>
-      <li>Overview</li>
-      <li>Pricing</li>
-      <li>Marketplace</li>
-      <li>Features</li>
-      <li>Integrations</li>
+      <li class="nav-toggle-link"><a>Product</a>
+        <ul>
+          <li><a href="#">Overview</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Marketplace</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Integrations</a></li>
+        </ul>
+      </li>
+      
     
-      <li>Company</li>
+      <li class="nav-toggle-link"><a href="#">Company</a>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </li>
     
-      <li>About</li>
-      <li>Team</li>
-      <li>Blog</li>
-      <li>Careers</li>
-    
-      <li>Connect</li>
-    
-      <li>Contact</li>
-      <li>Newsletter</li>
-      <li>LinkedIn</li>
-    
-      <a>Login</a>
-      <a>Sign Up</a>
+      <li class="nav-toggle-link"><a href="#">Connect</a>
+        <ul>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Newsletter</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </li>
+
+      <div class="account-action">
+        <a><button>Login</button></a>
+        <a><button>Sign Up</button></a>
+      </div>
     </nav>
-  </div>
+  </header>
 
 
 <div class="intro">
   <h1>A modern publishing platform</h1>
   <h4>Grow your audience and build your online brand</h4>
 
-  <a>Start for Free</a>
-  <a>Learn More</a>
+  <button><a>Start for Free</a></button>
+  <button><a>Learn More</a></button>
 </div>
 <div>
   <h1>Designed for the future</h1>
