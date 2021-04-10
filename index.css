@@ -4,20 +4,50 @@ header .navbar{
     position: sticky;
 }
 
-li a{
+.navbar-left{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+ul {
     list-style-type: none;
+    display: flex;
+
+}
+
+li{
+    list-style-type: none;
+}
+
+ul li a{
     text-decoration: none;
 }
 
 .attribution { 
-    font-size: 11px; text-align: center; 
+    font-size: 11px; 
+    text-align: center; 
 }
     
 .attribution a { 
     color: hsl(228, 45%, 44%); 
 }
 
-.intro{
+.intro-section{
     height: 100vh;
     background-color: aqua;
+    text-align: center;
+}
+
+.intro-buttons{
+    display: flex;
+    flex-direction: row;
+    border-radius: 10em;
+}
+
+.footer-menu{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
 }
