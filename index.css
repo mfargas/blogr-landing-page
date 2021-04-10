@@ -1,7 +1,12 @@
-header .navbar {
+header{
     display: flex;
     flex-flow: row;
     position: sticky;
+}
+
+.navbar-logo{
+    text-decoration: none;
+    font-weight: 800;
 }
 
 .navbar-left{
@@ -25,14 +30,22 @@ ul li a{
     text-decoration: none;
 }
 
+.inside-menu{
+    flex-direction: column;
+}
+
+.account-action{
+    align-content: center;
+}
+
 .attribution { 
     font-size: 11px; 
     text-align: center; 
 }
     
-.attribution a { 
+/* .attribution a { 
     color: hsl(228, 45%, 44%); 
-}
+} */
 
 .intro-section{
     height: 100vh;
@@ -44,6 +57,27 @@ ul li a{
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+.section-2{
+    height: 125vh;
+}
+
+.section-2-header{
+    text-align: center;
+}
+
+.section-2-content{
+    display: flex;
+}
+
+.left-side-s2{
+    width: 50vw;
+}
+
+.s3-text, .s4-text {
+    width: 50vw;
+    margin-left: auto;
 }
 
 .footer-menu{
