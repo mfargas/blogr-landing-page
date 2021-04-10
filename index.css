@@ -67,11 +67,12 @@ ul li a{
 }
 
 .section-2{
-    height: 125vh;
+    height: 75vh;
 }
 
 .section-2-header{
     text-align: center;
+    padding: 10em;
 }
 
 .section-2-content{
@@ -80,6 +81,7 @@ ul li a{
 
 .left-side-s2{
     width: 50vw;
+    padding: 5em;
 }
 
 .s3-text, .s4-text {
