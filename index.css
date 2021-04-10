@@ -1,8 +1,11 @@
-header{
+header .navbar{
     display: flex;
+    flex-direction: row;
+    position: sticky;
 }
 
-li .nav-toggle-link{
+li a{
+    list-style-type: none;
     text-decoration: none;
 }
 
