@@ -1,6 +1,6 @@
-header .navbar{
+header .navbar {
     display: flex;
-    flex-direction: row;
+    flex-flow: row;
     position: sticky;
 }
 
@@ -43,7 +43,7 @@ ul li a{
 .intro-buttons{
     display: flex;
     flex-direction: row;
-    border-radius: 10em;
+    justify-content: center;
 }
 
 .footer-menu{
