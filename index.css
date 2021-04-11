@@ -2,6 +2,7 @@
 
 body{
     background-color: #F1F1F1;
+    color: black;;
 }
 
 .container-fluid{
@@ -91,6 +92,17 @@ nav ul li ul li a{
     margin: auto;
 }
 
+label{
+    display: none;
+    font-size: 26px;
+    width: 25px;
+    float: right;
+}
+
+#toggle{
+    display: none;
+}
+
 .attribution { 
     font-size: 11px; 
     text-align: center; 
@@ -101,8 +113,7 @@ nav ul li ul li a{
 } */
 
 .intro-section{
-    height: 100vh;
-    background-color: aqua;
+    margin: auto;
     text-align: center;
 }
 
@@ -132,6 +143,12 @@ nav ul li ul li a{
 
 .section-3{
     height: 50vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.section-3 img{
+    margin-left: auto;
 }
 
 .section-4{
@@ -148,4 +165,57 @@ nav ul li ul li a{
     display: flex;
     flex-flow: row;
     justify-content: center;
+}
+
+footer ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+footer ul li{
+    list-style-type: none;
+    text-decoration: none;
+}
+
+footer ul li a{
+    list-style-type: none;
+    text-decoration: none;
+}
+
+footer ul li ul{
+    flex-direction: column;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+footer ul li ul li{
+    list-style-type: none;
+    text-decoration: none;
+}
+
+footer ul li ul li a{
+    list-style-type: none;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 500px){
+    label{
+        display: block;
+    }
+
+    .navbar-left{
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+    }
+
+    .navbar-left a{
+        display: block;
+    }
+
+    #toggle:checked + .navbar-left{
+        display: block;
+    }
 }
