@@ -1,13 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
 
 body{
-    background-color: #F1F1F1;
-    color: black;;
+    background-color: whitesmoke;
+    font-family: 'Overpass', sans-serif;
+    font-size: 16px;
+    color: black;
 }
 
 .container-fluid{
     display: flexbox;
-    font-family: 'Noto Sans', sans-serif;
+    margin: 0%;
+    padding: 0%;
 }
 
 header{
@@ -26,8 +29,8 @@ header{
 
 .navbar-logo{
     text-decoration: none;
-    font-family:'Noto Sans', sans-serif;
-    font-weight: 700;
+    font-family:'Ubuntu', sans-serif;
+    font-weight: 600;
 }
 
 .navbar-left{
@@ -113,7 +116,9 @@ label{
 } */
 
 .intro-section{
+    background-image: linear-gradient(hsl(353, 100%, 62%), hsl(13, 100%, 72%)) ;
     margin: auto;
+    height: 100vh;
     text-align: center;
 }
 
@@ -124,7 +129,7 @@ label{
 }
 
 .section-2{
-    height: 75vh;
+    height: 125vh;
 }
 
 .section-2-header{
@@ -147,6 +152,7 @@ label{
 
 .section-3{
     height: 50vh;
+    background-image: linear-gradient(hsl(237, 17%, 21%), hsl(237, 23%, 32%));
     display: flex;
     flex-direction: row;
 }
