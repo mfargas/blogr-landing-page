@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+body{
+    background-color: #F1F1F1;
+}
+
 .container-fluid{
     display: flexbox;
     font-family: 'Noto Sans', sans-serif;
@@ -7,8 +11,16 @@
 
 header{
     display: flex;
+    flex-wrap: wrap;
     flex-flow: row;
     position: sticky;
+    width: 100%;
+    background-color: white;
+    height: 3em;
+}
+
+.btn-toggle-nav{
+    float: right;
 }
 
 .navbar-logo{
@@ -24,18 +36,46 @@ header{
     width: 100%;
 }
 
-ul {
+nav ul {
     list-style-type: none;
     display: flex;
 
 }
 
-li{
+nav ul li{
     list-style-type: none;
+    position: relative;
 }
 
-a{
+nav ul li a{
+    display: block;
+    height: 100%;
+    padding: 0 10px;
     text-decoration: none;
+}
+
+nav ul li ul{
+    display: none;
+    position: absolute;
+    background-color: white;
+    border-radius: 5px;
+}
+
+nav ul li:hover ul{
+    display: block;
+    position: absolute;
+    background-color: white;
+    border-radius: 5px;
+}
+
+nav ul li ul li{
+    width: 100px;
+    border-radius: 5px;
+}
+
+nav ul li ul li a{
+    padding: 2px;
+    text-align: left;
 }
 
 .inside-menu{
@@ -44,6 +84,11 @@ a{
 
 .account-action{
     align-content: center;
+    margin-top: auto;
+}
+
+.nav-btn-login, .nav-btn-signup{
+    margin: auto;
 }
 
 .attribution { 
