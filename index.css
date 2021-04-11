@@ -5,22 +5,33 @@ body{
     font-family: 'Overpass', sans-serif;
     font-size: 16px;
     color: black;
+    margin: 0%;
+    padding: 0%;
 }
 
 .container-fluid{
     display: flexbox;
-    margin: 0%;
-    padding: 0%;
 }
 
 header{
     display: flex;
     flex-wrap: wrap;
     flex-flow: row;
-    position: sticky;
+    position: fixed;
     width: 100%;
-    background-color: white;
     height: 3em;
+    color: white;
+    padding: 2em;
+}
+
+
+a:link {
+    color: white;
+    text-decoration: none;
+}
+
+a:visited {
+    color: papayawhip;
 }
 
 .btn-toggle-nav{
@@ -60,6 +71,7 @@ nav ul li a{
 
 nav ul li ul{
     display: none;
+    padding: 0;
     position: absolute;
     background-color: white;
     border-radius: 5px;
@@ -82,13 +94,19 @@ nav ul li ul li a{
     text-align: left;
 }
 
+nav ul li ul li a:link{
+    color: hsl(208, 49%, 24%);
+    padding: 2px;
+    text-align: left;
+}
+
 .inside-menu{
     flex-direction: column;
 }
 
 .account-action{
     align-content: center;
-    margin-top: auto;
+    padding: 2em;
 }
 
 .nav-btn-login, .nav-btn-signup{
@@ -106,10 +124,10 @@ label{
     display: none;
 }
 
-.attribution { 
+/* .attribution { 
     font-size: 11px; 
     text-align: center; 
-}
+} */
     
 /* .attribution a { 
     color: hsl(228, 45%, 44%); 
@@ -117,9 +135,14 @@ label{
 
 .intro-section{
     background-image: linear-gradient(hsl(353, 100%, 62%), hsl(13, 100%, 72%)) ;
+    color: white;
     margin: auto;
     height: 100vh;
     text-align: center;
+}
+
+.intro-text{
+    margin-top: auto;
 }
 
 .intro-buttons{
@@ -129,12 +152,13 @@ label{
 }
 
 .section-2{
-    height: 125vh;
+    height: 115vh;
 }
 
 .section-2-header{
     text-align: center;
     padding: 1em;
+    color: hsl(208, 49%, 24%)
 }
 
 .section-2-content{
@@ -148,11 +172,13 @@ label{
 
 .desktop-img{
     width: 25vw;
+    height: 100%;
 }
 
 .section-3{
     height: 50vh;
     background-image: linear-gradient(hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+    color: white;
     display: flex;
     flex-direction: row;
 }
@@ -162,7 +188,12 @@ label{
 }
 
 .section-4{
-    height: 50vh;
+    height: 60vh;
+    display: flex;
+}
+
+.section-2, .section-4 h3{
+    color: hsl(208, 49%, 24%);
 }
 
 .s3-text, .s4-text {
@@ -172,9 +203,16 @@ label{
 }
 
 .footer-menu{
+    background-color: hsl(240, 10%, 16%);
     display: flex;
     flex-flow: row;
     justify-content: center;
+}
+
+.footer-logo{
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
 }
 
 footer ul{
@@ -184,9 +222,10 @@ footer ul{
     text-decoration: none;
 }
 
-footer ul li{
+.footer-menu ul li{
     list-style-type: none;
     text-decoration: none;
+    padding-right: 1em;
 }
 
 footer ul li a{
@@ -198,6 +237,7 @@ footer ul li ul{
     flex-direction: column;
     list-style-type: none;
     text-decoration: none;
+    padding: 0;
 }
 
 footer ul li ul li{
