@@ -141,6 +141,10 @@ label{
     padding: 5em;
 }
 
+.desktop-img{
+    width: 25vw;
+}
+
 .section-3{
     height: 50vh;
     display: flex;
