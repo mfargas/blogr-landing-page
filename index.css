@@ -9,6 +9,13 @@ body{
     padding: 0%;
 }
 
+a{
+    margin: auto;
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+
 .container-fluid{
     display: flexbox;
     padding: 0;
@@ -23,10 +30,18 @@ header{
     width: 100%;
     height: 3em;
     color: white;
-    padding: 2em;
+    padding: 3em;
     top: 0;
 }
 
+header h2{
+    height: max-content;
+    width: 20%;
+}
+
+header h2 a{
+    font-size: 1.5em;
+}
 
 a:link {
     color: white;
@@ -51,7 +66,7 @@ a:visited {
     display: flex;
     flex-flow: row;
     justify-content: space-between;
-    width: 100%;
+    width: 80%;
 }
 
 nav ul {
@@ -61,7 +76,7 @@ nav ul {
 }
 
 nav ul li{
-    font-size: 14px;
+    font-size: 12px;
     list-style-type: none;
     position: relative;
 }
@@ -69,7 +84,7 @@ nav ul li{
 nav ul li a{
     display: block;
     height: 100%;
-    padding: 0 10px;
+    padding: 10px;
     text-decoration: none;
 }
 
@@ -79,7 +94,7 @@ nav ul li ul{
     position: absolute;
     background-color: white;
     border-radius: 5px;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 nav ul li:hover ul{
@@ -91,8 +106,7 @@ nav ul li:hover ul{
 
 nav ul li ul li{
     width: 100px;
-    
-    /* border-radius: 5px; */
+    font-size: 10px;
 }
 
 nav ul li ul li a{
@@ -135,10 +149,11 @@ label{
 /* Main Section */
 
 .intro-section{
-    background-image: linear-gradient(hsl(353, 100%, 62%), hsl(13, 100%, 72%)) ;
+    background-image: linear-gradient(to top right, hsl(353, 100%, 62%), hsl(13, 100%, 72%));
+    border-radius: 0px 0px 0px 100px;
     color: white;
     margin: auto;
-    height: 100vh;
+    height: 85vh;
     text-align: center;
     overflow: auto;
 }
@@ -175,15 +190,17 @@ label{
 }
 
 .desktop-img{
-    width: 25vw;
+    width: 50%;
     height: 100%;
+    margin-right: -35%;
 }
 
 /* Section 3 */
 
 .section-3{
     height: 50vh;
-    background-image: linear-gradient(hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+    background-image: linear-gradient(to bottom right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+    border-radius: 0px 50px 0px 50px;
     color: white;
     display: flex;
     flex-direction: row;
@@ -196,8 +213,12 @@ label{
 /* Section 4 */
 
 .section-4{
-    height: 60vh;
+    height: 90vh;
     display: flex;
+}
+
+.section-4 img{
+    margin-left: -16%;
 }
 
 .section-2, .section-4 h3{
@@ -214,9 +235,10 @@ label{
 
 .footer-menu{
     background-color: hsl(240, 10%, 16%);
+    border-radius: 0px 100px 0px 0px;
     display: flex;
     flex-flow: row;
-    justify-content: center;
+    justify-content: space-evenly;
     overflow: auto;
 }
 
@@ -224,6 +246,8 @@ label{
     color: white;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 600;
+    font-size: 2em;
+    margin-left: 3em;
 }
 
 footer ul{
@@ -234,9 +258,11 @@ footer ul{
 }
 
 .footer-menu ul li{
+    font-size: 10px;
     list-style-type: none;
     text-decoration: none;
-    padding-right: 1em;
+    padding: 3em;
+    justify-content: space-evenly;
 }
 
 footer ul li a{
@@ -248,7 +274,6 @@ footer ul li ul{
     flex-direction: column;
     list-style-type: none;
     text-decoration: none;
-    padding: 0;
 }
 
 footer ul li ul li{
@@ -259,6 +284,8 @@ footer ul li ul li{
 footer ul li ul li a{
     list-style-type: none;
     text-decoration: none;
+    text-align: left;
+    padding: 0;
 }
 
 /* Media Query Phone */
