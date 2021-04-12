@@ -182,6 +182,7 @@ label{
 
 .section-2-content{
     display: flex;
+    overflow: hidden;
 }
 
 .left-side-s2{
