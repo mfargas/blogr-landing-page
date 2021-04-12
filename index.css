@@ -11,6 +11,8 @@ body{
 
 .container-fluid{
     display: flexbox;
+    padding: 0;
+    margin: 0;
 }
 
 header{
@@ -22,6 +24,7 @@ header{
     height: 3em;
     color: white;
     padding: 2em;
+    top: 0;
 }
 
 
@@ -58,6 +61,7 @@ nav ul {
 }
 
 nav ul li{
+    font-size: 14px;
     list-style-type: none;
     position: relative;
 }
@@ -71,10 +75,11 @@ nav ul li a{
 
 nav ul li ul{
     display: none;
-    padding: 0;
+    padding: 10px;
     position: absolute;
     background-color: white;
     border-radius: 5px;
+    margin-top: 10px;
 }
 
 nav ul li:hover ul{
@@ -86,7 +91,8 @@ nav ul li:hover ul{
 
 nav ul li ul li{
     width: 100px;
-    border-radius: 5px;
+    
+    /* border-radius: 5px; */
 }
 
 nav ul li ul li a{
@@ -107,6 +113,8 @@ nav ul li ul li a:link{
 .account-action{
     align-content: center;
     padding: 2em;
+    width: max-content;
+    margin-right: 1em;
 }
 
 .nav-btn-login, .nav-btn-signup{
@@ -124,14 +132,7 @@ label{
     display: none;
 }
 
-/* .attribution { 
-    font-size: 11px; 
-    text-align: center; 
-} */
-    
-/* .attribution a { 
-    color: hsl(228, 45%, 44%); 
-} */
+/* Main Section */
 
 .intro-section{
     background-image: linear-gradient(hsl(353, 100%, 62%), hsl(13, 100%, 72%)) ;
@@ -139,6 +140,7 @@ label{
     margin: auto;
     height: 100vh;
     text-align: center;
+    overflow: auto;
 }
 
 .intro-text{
@@ -150,6 +152,8 @@ label{
     flex-direction: row;
     justify-content: center;
 }
+
+/* Section 2 */
 
 .section-2{
     height: 115vh;
@@ -175,6 +179,8 @@ label{
     height: 100%;
 }
 
+/* Section 3 */
+
 .section-3{
     height: 50vh;
     background-image: linear-gradient(hsl(237, 17%, 21%), hsl(237, 23%, 32%));
@@ -186,6 +192,8 @@ label{
 .section-3 img{
     margin-left: auto;
 }
+
+/* Section 4 */
 
 .section-4{
     height: 60vh;
@@ -202,11 +210,14 @@ label{
     padding: 1em;
 }
 
+/* Footer */
+
 .footer-menu{
     background-color: hsl(240, 10%, 16%);
     display: flex;
     flex-flow: row;
     justify-content: center;
+    overflow: auto;
 }
 
 .footer-logo{
@@ -250,7 +261,13 @@ footer ul li ul li a{
     text-decoration: none;
 }
 
+/* Media Query Phone */
+
 @media only screen and (max-width: 500px){
+    body{
+        width: 100vw;
+    }
+
     label{
         display: block;
     }
@@ -268,4 +285,6 @@ footer ul li ul li a{
     #toggle:checked + .navbar-left{
         display: block;
     }
+
+
 }
