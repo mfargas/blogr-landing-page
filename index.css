@@ -412,6 +412,15 @@ footer ul li ul li{
         height: max-content;
     }
 
+    .section-4 img{
+        height: auto;
+        margin: auto;
+    }
+
+    .s4-text{
+        text-align: center;
+    }
+
     footer ul{
         flex-direction: column;
         text-align: center;
