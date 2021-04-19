@@ -385,7 +385,7 @@ footer ul li ul li{
 
     .section-2{
         flex-direction: column;
-        height: max-content;
+        width: 80%;
         text-align: center;
     }
 
@@ -405,6 +405,7 @@ footer ul li ul li{
 
     .section-3 img{
         margin-top: -40%;
+        justify-self: center;
     }
 
     .section-4{
@@ -414,6 +415,7 @@ footer ul li ul li{
 
     .section-4 img{
         height: auto;
+        width: 100%;
         margin: auto;
     }
 
