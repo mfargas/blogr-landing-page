@@ -73,7 +73,6 @@ a:visited {
 nav ul {
     list-style-type: none;
     display: flex;
-
 }
 
 nav ul li{
@@ -135,7 +134,7 @@ nav ul li ul li a:link{
 .nav-btn-login button, .nav-btn-signup button{
     margin: auto;
     padding: 1em;
-    border-radius: 50%;
+    border-radius: 20px;
     border-width: 0.5px;
 }
 
@@ -259,14 +258,14 @@ label{
 /* Section 4 */
 
 .section-4{
-    height: 90vh;
+    height: max-content;
     display: flex;
     flex-direction: row;
 }
 
 .section-4 img{
-    margin-left: -15%;
-    height: 80%;
+    margin-left: -30%;
+    height: 20%;
     margin-top: auto;
     margin-bottom: auto;
 }
@@ -282,7 +281,7 @@ label{
 } 
 
 .s4-text {
-    width: 75%;
+    width: 100%;
     margin: auto;
     padding: 1em;
     max-width: 30em;
@@ -293,6 +292,7 @@ label{
 .footer-menu{
     background-color: hsl(240, 10%, 16%);
     border-radius: 0px 100px 0px 0px;
+    width: 100%;
     display: flex;
     flex-flow: row;
     justify-content: left;
@@ -314,12 +314,14 @@ footer ul{
     font-size: 1em;
     padding: 2em;
     width: 100%;
+    justify-content: stretch;
 }
 
 footer ul li{
     list-style-type: none;
     text-decoration: none;
     padding: 4em;
+    /* margin-left: 1em; */
     font-size: 1em;
     /* justify-content: left; */
     justify-content: stretch;
@@ -365,18 +367,44 @@ footer ul li ul li{
         width: 100vw;
     }
 
-    label{
+    header label{
         display: block;
+        float: right;
+    }
+
+    header input{
+        float: right;
+    }
+
+    .navbar{
+        flex-direction: column;
     }
 
     .navbar-left{
         display: flex;
-        flex-flow: column;
+        flex-direction: column;
         width: 100%;
+    }
+
+    .navbar-left ul{
+        flex-direction: column;
+        height: max-content;
+    }
+
+    .navbar-left ul li ul{
+        display: flex;
+        flex-direction: column;
     }
 
     .navbar-left a{
         display: block;
+        width: 100%;
+    }
+
+    nav{
+        /* display: none; */
+        flex-direction: column;
+        height: 100%;
     }
 
     #toggle:checked, .navbar-left{
@@ -386,11 +414,17 @@ footer ul li ul li{
     .section-2{
         flex-direction: column;
         width: 80%;
+        height: max-content;
+        justify-content: center;
         text-align: center;
     }
 
     .section-2-content{
         flex-direction: column-reverse;
+    }
+
+    .section-2-content img{
+        justify-content: center;
     }
 
     .desktop-img img{
@@ -427,7 +461,7 @@ footer ul li ul li{
         flex-direction: column;
         text-align: center;
         padding: 0;
-        margin: 0;
+        margin: 1em;
     }
 
     footer ul li{
