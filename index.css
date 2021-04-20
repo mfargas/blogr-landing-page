@@ -405,6 +405,8 @@ footer ul li ul li{
         /* display: none; */
         flex-direction: column;
         height: 100%;
+        margin: 0;
+        padding: 0;
     }
 
     #toggle:checked, .navbar-left{
@@ -424,8 +426,14 @@ footer ul li ul li{
     }
 
     .section-2-content img{
+        margin: auto;
         justify-content: center;
     }
+
+    .left-side-s2{
+        margin: auto;
+        padding-bottom: 10em;
+    } 
 
     .desktop-img img{
         justify-content: center;
@@ -440,6 +448,7 @@ footer ul li ul li{
     .section-3 img{
         margin-top: -40%;
         justify-self: center;
+        width: 100%;
     }
 
     .section-4{
@@ -448,13 +457,16 @@ footer ul li ul li{
     }
 
     .section-4 img{
-        height: auto;
-        width: 100%;
+        height: 50%;
+        width: auto;
         margin: auto;
     }
 
     .s4-text{
         text-align: center;
+        padding: 0;
+        width: 80%;
+        margin: auto;
     }
 
     footer ul{
@@ -466,5 +478,27 @@ footer ul li ul li{
 
     footer ul li{
         padding: 0.5em;
+    }
+
+    footer ul li ul{
+        padding: 0;
+    }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 836px){
+    .section-2-content{
+        flex-direction: column-reverse;
+        width: 80%;
+        margin: auto;
+    }
+
+    .section-4{
+        flex-direction: column;
+    }
+    .section-4 img{
+        height: 20vh;
+    }
+    footer ul li{
+        flex-direction: column;
     }
 }
