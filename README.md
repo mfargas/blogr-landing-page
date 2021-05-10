@@ -69,13 +69,12 @@ const proudOfThisFunc = () => {
 k
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - 
-- [Example resource 2](https://www.example.com) - 
-
+- [Background-positioning](https://css-tricks.com/almanac/properties/b/background-position/) - 
+<!-- - [Example resource 2](https://www.example.com) -  -->
 
 ## Author
 
-- Website - [Marjoree](https://www.your-site.com)
+- Website - [www.marjoree.com](https://www.marjoree.com)
 - Frontend Mentor - [@mfargas](https://www.frontendmentor.io/profile/mfargas)
 - Twitter - [@marjoree_js](https://www.twitter.com/marjoree_js)
 
