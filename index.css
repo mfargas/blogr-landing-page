@@ -384,44 +384,80 @@ footer ul li ul li{
         width: 100vw;
     }
 
+    .container-fluid{
+        width: 100vw;
+    }
+
     header label{
         display: block;
-        float: right;
+        position: fixed;
+        right: 1em;
+        top: 1em;
     }
 
     header input{
-        float: right;
+        display: block;
+        position: fixed;
+        right: 1em;
+        top: 1em;
     }
 
-    .navbar{
+    header{
         flex-direction: column;
+        margin: auto;
+        padding: 1em;
+        height: max-content;
+        width: 90vw;
     }
 
     .navbar-left{
         display: flex;
         flex-direction: column;
+        background-color: hsl(0, 0%, 100%);
         width: 100%;
     }
 
     .navbar-left ul{
         flex-direction: column;
         height: max-content;
+        margin: auto;
+        padding: 0;
     }
 
     .navbar-left ul li{
         flex-direction: column;
         height: max-content;
+        color: hsl(208, 49%, 24%);
+        font-size: 1em;
+        margin: auto;
     }
 
     .navbar-left ul li ul{
-        display: flex;
+        display: none;
         flex-direction: column;
+        background-color: hsl(240, 2%, 79%);
         height: max-content;
+        margin-top: 1em;
     }
 
     .navbar-left a{
         display: block;
         width: 100%;
+    }
+
+    .account-action{
+        bottom: 5em;
+        text-align: center;
+        width: 90%;
+        padding: 0;
+        margin: auto;
+        color: hsl(208, 49%, 24%);
+    }
+
+    .account-action button{
+        color: hsl(208, 49%, 24%);
+        z-index: 4;
+        padding: 0;
     }
 
     nav{
@@ -436,9 +472,10 @@ footer ul li ul li{
         display: block;
     }
 
+
     .section-2{
         flex-direction: column;
-        width: 80%;
+        width: 100%;
         height: max-content;
         justify-content: center;
         text-align: center;
@@ -452,6 +489,10 @@ footer ul li ul li{
     .section-2-content img{
         margin: auto;
         justify-content: center;
+    }
+
+    .section-2 p{
+        width: 100%;
     }
 
     .left-side-s2{
@@ -493,19 +534,27 @@ footer ul li ul li{
         margin: auto;
     }
 
+    .footer-menu{
+        flex-flow: column;
+    }
+
     footer ul{
         flex-direction: column;
         text-align: center;
         padding: 0;
-        margin: 1em;
+        margin: auto;
     }
 
     footer ul li{
-        padding: 0.5em;
+        margin: auto;
+        padding: 1em;
     }
 
     footer ul li ul{
-        padding: 0;
+        margin: auto;
+        padding-top: 1em;
+        font-size: 11px;
+        opacity: 50%;
     }
 }
 
