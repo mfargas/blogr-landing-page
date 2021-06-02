@@ -81,6 +81,7 @@ nav ul li a{
     height: 100%;
     padding: 10px;
     text-decoration: none;
+    color: hsl(208, 49%, 24%);
 }
 
 nav ul li ul{
@@ -388,14 +389,14 @@ footer ul li ul li{
         width: 100vw;
     }
 
-    header label{
+    .burger{
         display: block;
         position: fixed;
         right: 1em;
         top: 1em;
     }
 
-    header input{
+    .burger-input{
         display: block;
         position: fixed;
         right: 1em;
@@ -411,10 +412,16 @@ footer ul li ul li{
     }
 
     .navbar-left{
+        display: none;
+        background-color: hsl(0, 0%, 100%);
+        width: 75vw;
+        height: max-content;
+        margin: auto;
+    }
+
+    .menuToggle{
         display: flex;
         flex-direction: column;
-        background-color: hsl(0, 0%, 100%);
-        width: 100%;
     }
 
     .navbar-left ul{
@@ -424,25 +431,53 @@ footer ul li ul li{
         padding: 0;
     }
 
-    .navbar-left ul li{
+    .nav-toggle-link{
+        display: flex;
+        flex-direction: row;
+    }
+
+    nav ul li{
         flex-direction: column;
         height: max-content;
         color: hsl(208, 49%, 24%);
         font-size: 1em;
+        z-index: 7;
         margin: auto;
+        text-align: center;
     }
 
-    .navbar-left ul li ul{
+    .carrot{
+        display: block;
+        vertical-align: middle;
+    }
+
+    .carrot-input{
         display: none;
+    }
+
+    .inside-menu{
+        display: none;
+        position: inherit;
         flex-direction: column;
-        background-color: hsl(240, 2%, 79%);
+        background-color: hsl(240, 20%, 52%);
         height: max-content;
+        width: 80%;
         margin-top: 1em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .inside-menu-open{
+        position: initial;
+        display: block;
     }
 
     .navbar-left a{
-        display: block;
-        width: 100%;
+        display: flex;
+        flex-flow: row;
+        width: min-content;
+        height: min-content;
+        align-items: baseline;
     }
 
     .account-action{
@@ -461,15 +496,14 @@ footer ul li ul li{
     }
 
     nav{
-        /* display: none; */
         flex-direction: column;
         height: 100%;
         margin: 0;
         padding: 0;
     }
 
-    #toggle:checked, .navbar-left{
-        display: block;
+    #toggle:checked {
+        display: none;
     }
 
 
@@ -498,6 +532,8 @@ footer ul li ul li{
     .left-side-s2{
         margin: auto;
         padding-bottom: 10em;
+        padding-left: 0em;
+        padding-right: 0em;
     } 
 
     .desktop-img img{
@@ -559,6 +595,15 @@ footer ul li ul li{
 }
 
 @media only screen and (min-width: 501px) and (max-width: 836px){
+    .navbar-left, .nav-toggle-link{
+        color: #000;
+        text-align: center;
+    }
+
+    nav ul li a {
+        color: #000;
+    }
+    
     .section-2{
         margin: auto;
         justify-content: center;

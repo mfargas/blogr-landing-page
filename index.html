@@ -14,11 +14,21 @@
 <div class="container-fluid">
   <header class="navbar">
     <h2><a href="#" class="navbar-logo">Blogr</a></h2>
-      <label for="toggle">&#9776;</label>
-      <input type="checkbox" id="toggle" />
-    <nav class="navbar-left">
-      <ul>
-        <li class="nav-toggle-link"><a href="#">Product</a>
+
+    <nav>
+            <label class="burger" href="javascript:void(0);" onclick="toggleMenu()" for="toggle"><svg width="32" height="18" xmlns="http://www.w3.org/2000/svg">
+              <g fill="#FFF" fill-rule="evenodd">
+                <path d="M0 0h32v2H0zM0 8h32v2H0zM0 16h32v2H0z" />
+              </g>
+            </svg></label>
+            <input class="burger-input" type="checkbox" id="toggle" />
+      <!-- <a href="javascript:void(0);" onclick="toggleMenu()" class="icon">&#9776;</a> -->
+      <ul class="navbar-left">
+        <li class="nav-toggle-link">
+          <a href="#">Product<label class="carrot" href="javascript:void(0);" onclick="dropMenu()" for="drop">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7">
+              <path fill="none" stroke="#FF7B86" stroke-width="2" opacity=".75" d="M1 1l4 4 4-4" />
+            </svg></label><input class="carrot-input" type="checkbox" id="drop" /></a>
           <ul class="inside-menu">
             <li><a href="#">Overview</a></li>
             <li><a href="#">Pricing</a></li>
@@ -28,7 +38,10 @@
           </ul>
         </li>
       
-        <li class="nav-toggle-link"><a href="#">Company</a>
+        <li class="nav-toggle-link"><a href="#">Company<label class="carrot" href="javascript:void(0);" onclick="dropMenu()" for="drop">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7">
+              <path fill="none" stroke="#FF7B86" stroke-width="2" opacity=".75" d="M1 1l4 4 4-4" />
+            </svg></label><input class="carrot-input" type="checkbox" id="drop" /></a>
           <ul class="inside-menu">
             <li><a href="#">About</a></li>
             <li><a href="#">Team</a></li>
@@ -37,18 +50,22 @@
           </ul>
         </li>
     
-        <li class="nav-toggle-link"><a href="#">Connect</a>
+        <li class="nav-toggle-link"><a href="#">Connect<label class="carrot" href="javascript:void(0);" onclick="dropMenu()" for="drop">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7">
+              <path fill="none" stroke="#FF7B86" stroke-width="2" opacity=".75" d="M1 1l4 4 4-4" />
+            </svg></label><input class="carrot-input" type="checkbox" id="drop" /></a>
           <ul class="inside-menu">
             <li><a href="#">Contact</a></li>
             <li><a href="#">Newsletter</a></li>
             <li><a href="#">LinkedIn</a></li>
           </ul>
         </li>
-      </ul>
+      <hr>
       <div class="account-action">
         <a href="#" class="nav-btn-login"><button>Login</button></a>
         <a href="#" class="nav-btn-signup"><button>Sign Up</button></a>
       </div>
+      </ul>
     </nav>
   </header>
 
@@ -143,5 +160,6 @@
     Coded by <a href="#">Marjoree E. F.</a>.
   </div>
   </div>
+  <script type="text/javascript" src="menu-toggle.js"></script>
 </body>
 </html>
