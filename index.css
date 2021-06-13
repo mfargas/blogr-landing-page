@@ -58,11 +58,18 @@ ul a:link {
     font-weight: 600;
 }
 
-.navbar-left{
+nav{
     display: flex;
     flex-flow: row;
     justify-content: space-between;
-    width: 80%;
+    width: 100%;
+}
+
+.navbar-left{
+    display: flex;
+    flex-flow: row;
+    justify-content: start;
+    width: 70%;
 }
 
 nav ul {
@@ -72,6 +79,7 @@ nav ul {
 
 nav ul li{
     font-size: 12px;
+    height: max-content;
     list-style-type: none;
     position: relative;
 }
@@ -121,11 +129,15 @@ nav ul li ul li a:link{
     color: hsl(208, 49%, 24%);
 }
 
+.nav-breaker{
+    display: none;
+}
+
 .account-action{
+    display: flex;
     align-content: center;
-    padding: 2em;
     width: max-content;
-    margin-right: 1em;
+    margin: auto;
 }
 
 .nav-btn-login button{
@@ -160,6 +172,10 @@ nav ul li ul li a:link{
     cursor: pointer;
 }
 
+.carrot-input{
+    display: none;
+}
+
 label{
     display: none;
     font-size: 26px;
@@ -191,12 +207,15 @@ label{
     margin: auto;
 }
 
-.intro-text h1{
-    font-size: 3em;
+.intro-text h2{
+    font-size: 2.75em;
+    width: 95%;
+    margin: auto;
+    text-align: center;
 }
 
-.intro-text h3{
-    font-size: 1em;
+.intro-text p{
+    font-size: 1.25em;
     padding: 1em;
 }
 
@@ -208,7 +227,10 @@ label{
 
 .intro-buttons button{
     border-radius: 25px;
+    border-width: 1px;
+    width: 8.5em;
     padding: 1em;
+    margin: 1rem;
 }
 
 .start-free-btn{
@@ -275,7 +297,9 @@ label{
 }
 
 .section-3 img{
+    margin-top: auto;
     margin-left: auto;
+    height: max-content;
 }
 
 /* Section 4 */
@@ -333,8 +357,9 @@ footer ul{
 
 .footer-logo{
     color:hsl(0, 0%, 100%);
-    font-weight: 600;
-    font-size: 2em;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 2.5em;
     padding: 2em;
 }
 
@@ -480,13 +505,39 @@ footer ul li ul li{
         align-items: baseline;
     }
 
+    .nav-breaker{
+        display: initial;
+    }
+
     .account-action{
         bottom: 5em;
         text-align: center;
         width: 90%;
+        height: 100%;
         padding: 0;
         margin: auto;
         color: hsl(208, 49%, 24%);
+        background-color: ivory;
+    }
+
+    .nav-btn-login button{
+        background-color: transparent;
+        color: hsl(0, 0%, 100%);
+        margin: auto;
+        padding: 1em;
+        border: transparent;
+        border-radius: 20px;
+        border-width: 0.5px;
+    }
+
+    .nav-btn-signup button{
+        background-color: hsl(0, 0%, 100%);
+        color: hsl(353, 100%, 62%);
+        margin: auto;
+        padding: 1em;
+        border-radius: 20px;
+        border-width: 0.5px;
+        border: transparent;   
     }
 
     .account-action button{
@@ -506,6 +557,10 @@ footer ul li ul li{
         display: none;
     }
 
+    .desktop-img{
+        width: 90%;
+        justify-content: center;
+    }
 
     .section-2{
         flex-direction: column;
@@ -525,15 +580,19 @@ footer ul li ul li{
         justify-content: center;
     }
 
-    .section-2 p{
-        width: 100%;
-    }
-
     .left-side-s2{
         margin: auto;
+        width: 90%;
+        text-align: center;
+        padding-top: auto;
         padding-bottom: 10em;
-        padding-left: 0em;
-        padding-right: 0em;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .left-side-s2 p{
+        margin: auto;
+        padding: 1em;
     } 
 
     .desktop-img img{
@@ -552,9 +611,17 @@ footer ul li ul li{
         width: 100%;
     }
 
+    .s3-text p{
+        width: 90%;
+        margin: auto;
+        padding: 1em;
+    }
+
     .section-4{
         flex-direction: column;
+        text-align: center;
         height: max-content;
+        padding-bottom: 4em;
     }
 
     .section-4 img{
@@ -563,11 +630,11 @@ footer ul li ul li{
         margin: auto;
     }
 
-    .s4-text{
-        text-align: center;
-        padding: 0;
-        width: 80%;
+    .s4-text p{
+        width: 85%;
         margin: auto;
+        padding: 1em;
+        max-width: 30em;
     }
 
     .footer-menu{
@@ -589,7 +656,6 @@ footer ul li ul li{
     footer ul li ul{
         margin: auto;
         padding-top: 1em;
-        font-size: 11px;
         opacity: 50%;
     }
 }
