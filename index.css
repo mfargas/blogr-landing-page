@@ -33,6 +33,7 @@ header{
     color: white;
     padding: 3em;
     top: 0;
+    z-index: 20;
 }
 
 header h2{
@@ -200,8 +201,8 @@ label{
 /* Main Section */
 
 .intro-section{
-    background-image: url(./images/bg-pattern-intro.svg),linear-gradient( 90deg ,hsl(13, 100%, 72%) 10%, hsl(353, 100%, 62%) 90%);
-    background-size: 200%;
+    background-image: linear-gradient( 90deg ,hsl(13, 100%, 72%), hsl(353, 100%, 62%) 80%);
+    background-size: 100%;
     background-position: 20% 50%;
     border-radius: 0px 0px 0px 100px;
     color: hsl(0, 0%, 100%);
@@ -211,10 +212,18 @@ label{
     display: flex;
     text-align: center;
     overflow: auto;
+    position: relative;
+}
+
+.background-intro{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
 }
 
 .intro-text{
     margin: auto;
+    z-index: 18;
 }
 
 .intro-text h2{
@@ -233,6 +242,7 @@ label{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    z-index: 19;
 }
 
 .intro-buttons button{
@@ -487,7 +497,6 @@ footer ul li ul li{
 
     .carrot{
         display: block;
-        vertical-align: middle;
     }
 
     .carrot-input{
