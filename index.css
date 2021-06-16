@@ -56,6 +56,7 @@ ul a:link {
     text-decoration: none;
     font-family:'Ubuntu', sans-serif;
     font-weight: 600;
+    padding: 1rem 4rem;
 }
 
 nav{
@@ -75,10 +76,12 @@ nav{
 nav ul {
     list-style-type: none;
     display: flex;
+    vertical-align: middle;
 }
 
 nav ul li{
-    font-size: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
     height: max-content;
     list-style-type: none;
     position: relative;
@@ -89,7 +92,7 @@ nav ul li a{
     height: 100%;
     padding: 10px;
     text-decoration: none;
-    color: hsl(208, 49%, 24%);
+    color: #ffffff;
 }
 
 nav ul li ul{
@@ -124,7 +127,7 @@ nav ul li ul li a:link{
     text-align: left;
 }
 
-.inside-menu{
+.inside-menu li a{
     flex-direction: column;
     color: hsl(208, 49%, 24%);
 }
@@ -138,13 +141,17 @@ nav ul li ul li a:link{
     align-content: center;
     width: max-content;
     margin: auto;
+    padding: 1rem 4rem;
 }
 
 .nav-btn-login button{
     background-color: transparent;
+    font-family:'Ubuntu', sans-serif;
+    font-weight: 600;
     color: hsl(0, 0%, 100%);
     margin: auto;
     padding: 1em;
+    width: 6rem;
     border: transparent;
     border-radius: 20px;
     border-width: 0.5px;
@@ -157,9 +164,12 @@ nav ul li ul li a:link{
 }
 
 .nav-btn-signup button{
+    font-family:'Ubuntu', sans-serif;
+    font-weight: 600;
     background-color: hsl(0, 0%, 100%);
     color: hsl(353, 100%, 62%);
     margin: auto;
+    width: 6.5rem;
     padding: 1em;
     border-radius: 20px;
     border-width: 0.5px;
@@ -190,9 +200,9 @@ label{
 /* Main Section */
 
 .intro-section{
-    background-image: url(./images/bg-pattern-intro.svg),linear-gradient(to top right, hsl(353, 100%, 62%), hsl(13, 100%, 72%));
+    background-image: url(./images/bg-pattern-intro.svg),linear-gradient( 90deg ,hsl(13, 100%, 72%) 10%, hsl(353, 100%, 62%) 90%);
     background-size: 200%;
-    background-position: center;
+    background-position: 20% 50%;
     border-radius: 0px 0px 0px 100px;
     color: hsl(0, 0%, 100%);
     margin: auto;
@@ -208,14 +218,14 @@ label{
 }
 
 .intro-text h2{
-    font-size: 2.75em;
-    width: 95%;
+    font-size: 3em;
+    width: 100%;
     margin: auto;
     text-align: center;
 }
 
 .intro-text p{
-    font-size: 1.25em;
+    font-size: 1em;
     padding: 1em;
 }
 
@@ -228,15 +238,17 @@ label{
 .intro-buttons button{
     border-radius: 25px;
     border-width: 1px;
-    width: 8.5em;
+    width: 8rem;
     padding: 1em;
     margin: 1rem;
 }
 
 .start-free-btn{
-    border: 2px solid hsl(0, 0%, 100%);
+    border: 1px solid hsl(0, 0%, 100%);
     background-color: hsl(0, 0%, 100%);
     color: hsl(353, 100%, 62%);
+    font-family:'Ubuntu', sans-serif;
+    font-weight: 600;
 }
 
 .start-free-btn:hover{
@@ -246,9 +258,11 @@ label{
 }
 
 .learn-more-btn{
-    border: 2px solid hsl(0, 0%, 100%);
+    border: 1px solid hsl(0, 0%, 100%);
     background-color: transparent;
     color: hsl(0, 0%, 100%);
+    font-family:'Ubuntu', sans-serif;
+    font-weight: 600;
 }
 
 .learn-more-btn:hover{
