@@ -217,8 +217,9 @@ label{
 
 .background-intro{
     position: absolute;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
 }
 
 .intro-text{
@@ -463,6 +464,7 @@ footer ul li ul li{
     .navbar-left{
         display: none;
         background-color: hsl(0, 0%, 100%);
+        border-radius: 10px;
         width: 75vw;
         height: max-content;
         margin: auto;
@@ -483,6 +485,8 @@ footer ul li ul li{
     .nav-toggle-link{
         display: flex;
         flex-direction: row;
+        color: hsl(208, 49%, 24%);
+        height: 4rem;
     }
 
     nav ul li{
@@ -521,6 +525,7 @@ footer ul li ul li{
     }
 
     .navbar-left a{
+        color: hsl(208, 49%, 24%);
         display: flex;
         flex-flow: row;
         width: min-content;
