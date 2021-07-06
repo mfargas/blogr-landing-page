@@ -70,8 +70,8 @@ nav{
 .navbar-left{
     display: flex;
     flex-flow: row;
-    justify-content: start;
-    width: 70%;
+    justify-content: space-between;
+    width: 90%;
 }
 
 nav ul {
@@ -322,7 +322,7 @@ label{
 }
 
 .section-3 img{
-    margin-top: auto;
+    margin-top: -5rem;
     margin-left: auto;
     height: max-content;
 }
@@ -466,7 +466,7 @@ footer ul li ul li{
         background-color: hsl(0, 0%, 100%);
         border-radius: 10px;
         width: 75vw;
-        height: max-content;
+        height: auto;
         margin: auto;
     }
 
@@ -476,15 +476,20 @@ footer ul li ul li{
     }
 
     .navbar-left ul{
-        flex-direction: column;
         height: max-content;
+        display: block;
+        align-self: center;
         margin: auto;
         padding: 0;
     }
 
+    .subMenuShow {
+        content-visibility: show;
+    }
+
     .nav-toggle-link{
-        display: flex;
-        flex-direction: row;
+        display: contents;
+        direction:inherit;
         color: hsl(208, 49%, 24%);
         height: 4rem;
     }
@@ -509,9 +514,10 @@ footer ul li ul li{
 
     .inside-menu{
         display: none;
-        position: inherit;
+        position: absolute;
         flex-direction: column;
         background-color: hsl(240, 20%, 52%);
+        content-visibility: hidden;
         height: max-content;
         width: 80%;
         margin-top: 1em;
@@ -520,8 +526,8 @@ footer ul li ul li{
     }
 
     .inside-menu-open{
-        position: initial;
-        display: block;
+        position: relative;
+        display: inline-block;
     }
 
     .navbar-left a{
