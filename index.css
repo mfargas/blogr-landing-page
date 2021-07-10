@@ -105,7 +105,7 @@ nav ul li ul{
     margin-top: 5px;
 }
 
-nav ul li:hover ul{
+nav ul li:active ul{
     display: block;
     position: absolute;
     background-color: white;
