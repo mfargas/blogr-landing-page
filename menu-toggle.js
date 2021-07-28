@@ -1,7 +1,7 @@
 const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 const height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 
-const mediaQueryMobile = window.matchMedia('(min-width: 325px) and (max-width: 425px)')
+const mediaQueryMobile = window.matchMedia('(min-width: 320px) and (max-width: 425px)')
 
 const mobileMenu = document.getElementsByClassName("burger-input");
 const nav = document.getElementsByClassName("navbar-left");
@@ -22,3 +22,6 @@ function handleScreenResize(e){
     }
 }
 
+mediaQueryMobile.addListener(handleScreenResize)
+
+handleScreenResize(mediaQueryMobile);

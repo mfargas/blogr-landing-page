@@ -20,6 +20,10 @@ body a {
   cursor: pointer;
 }
 
+body a:link {
+  text-decoration: none;
+}
+
 body .container-fluid {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -130,6 +134,13 @@ header nav ul.navbar-left li.nav-toggle-link {
   position: relative;
 }
 
+header nav ul.navbar-left li.nav-toggle-link:focus-within ul {
+  display: block;
+  position: absolute;
+  background-color: white;
+  border-radius: 5px;
+}
+
 header nav ul.navbar-left li.nav-toggle-link a {
   display: block;
   height: 100%;
@@ -183,6 +194,12 @@ header nav ul.navbar-left li.nav-toggle-link .account-action .nav-btn-login butt
   border-width: 0.5px;
 }
 
+header nav ul.navbar-left li.nav-toggle-link .account-action .nav-btn-login button:hover {
+  background-color: white;
+  color: #ff3d54;
+  cursor: pointer;
+}
+
 header nav ul.navbar-left li.nav-toggle-link .account-action .nav-btn-signup button {
   font-family: "Ubuntu", sans-serif;
   font-weight: 600;
@@ -194,6 +211,12 @@ header nav ul.navbar-left li.nav-toggle-link .account-action .nav-btn-signup but
   border-radius: 20px;
   border-width: 0.5px;
   border: transparent;
+}
+
+header nav ul.navbar-left li.nav-toggle-link .account-action .nav-btn-signup button:hover {
+  background-color: #ff7a85;
+  color: white;
+  cursor: pointer;
 }
 
 .intro-section {
@@ -252,15 +275,12 @@ header nav ul.navbar-left li.nav-toggle-link .account-action .nav-btn-signup but
   z-index: 19;
 }
 
-.intro-section .intro-text .intro-buttons button {
+.intro-section .intro-text .intro-buttons .start-free-btn button {
   border-radius: 25px;
   border-width: 1px;
   width: 8rem;
   padding: 1em;
   margin: 1rem;
-}
-
-.intro-section .intro-text .intro-buttons button .start-free-btn {
   border: 1px solid white;
   background-color: white;
   color: #ff3d54;
@@ -268,19 +288,36 @@ header nav ul.navbar-left li.nav-toggle-link .account-action .nav-btn-signup but
   font-weight: 600;
 }
 
-.intro-section .intro-text .intro-buttons button .learn-more-btn {
+.intro-section .intro-text .intro-buttons .start-free-btn button:hover {
+  background-color: #ff7a85;
+  color: white;
+  cursor: pointer;
+}
+
+.intro-section .intro-text .intro-buttons .learn-more-btn button {
   border: 1px solid white;
   background-color: transparent;
   color: white;
   font-family: "Ubuntu", sans-serif;
   font-weight: 600;
+  border-radius: 25px;
+  border-width: 1px;
+  width: 8rem;
+  padding: 1em;
+  margin: 1rem;
+}
+
+.intro-section .intro-text .intro-buttons .learn-more-btn button:hover {
+  background-color: white;
+  color: #ff3d54;
+  cursor: pointer;
 }
 
 .section-2 {
   height: 115vh;
 }
 
-.section-2 .section-2-header {
+.section-2 h2 {
   text-align: center;
   padding: 1em;
   color: #1f3f5b;
@@ -302,9 +339,8 @@ header nav ul.navbar-left li.nav-toggle-link .account-action .nav-btn-signup but
   color: #1f3f5b;
 }
 
-.section-2 .section-2-content .desktop-img {
+.section-2 .section-2-content img {
   width: 50%;
-  height: 100%;
   margin-right: -35%;
 }
 
@@ -376,8 +412,8 @@ footer.footer-menu {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row;
-          flex-flow: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   overflow: auto;
 }
 
@@ -456,7 +492,7 @@ footer.footer-menu ul li ul li a {
   padding: 0px;
 }
 
-@media (min-width: 325px) and (max-width: 425px) {
+@media (min-width: 300px) and (max-width: 425px) {
   .burger {
     display: block;
     position: fixed;
@@ -620,12 +656,6 @@ footer.footer-menu ul li ul li a {
   #toggle:checked {
     display: none;
   }
-  .desktop-img {
-    width: 90%;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
   .section-2 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -660,7 +690,7 @@ footer.footer-menu ul li ul li a {
     margin: auto;
     padding: 1em;
   }
-  .section-2 .section-2-content .left-side-s2 img {
+  .section-2 .section-2-content img {
     margin: auto;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -675,6 +705,7 @@ footer.footer-menu ul li ul li a {
     height: -moz-max-content;
     height: max-content;
     text-align: center;
+    padding-bottom: 2rem;
   }
   .section-3 img {
     margin-top: -40%;
@@ -682,7 +713,11 @@ footer.footer-menu ul li ul li a {
         justify-self: center;
     width: 100%;
   }
-  .section-3 p {
+  .section-3 .s3-text {
+    width: 90%;
+    padding: 0rem;
+  }
+  .section-3 .s3-text p {
     width: 90%;
     margin: auto;
     padding: 1em;
@@ -699,8 +734,7 @@ footer.footer-menu ul li ul li a {
     padding-bottom: 4em;
   }
   .section-4 img {
-    height: 25vh;
-    width: auto;
+    width: 100%;
     margin: auto;
   }
   .section-4 p {
@@ -709,13 +743,13 @@ footer.footer-menu ul li ul li a {
     padding: 1em;
     max-width: 30em;
   }
-  .footer-menu {
+  footer.footer-menu {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-            flex-flow: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  footer ul {
+  footer.footer-menu ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -724,11 +758,11 @@ footer.footer-menu ul li ul li a {
     padding: 0;
     margin: auto;
   }
-  footer ul li {
+  footer.footer-menu ul li {
     margin: auto;
     padding: 1em;
   }
-  footer ul li ul {
+  footer.footer-menu ul li ul {
     margin: auto;
     padding-top: 1em;
     opacity: 50%;
@@ -792,8 +826,8 @@ footer.footer-menu ul li ul li a {
   .footer-menu {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-            flex-flow: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .footer-menu .footer-logo {
     color: white;

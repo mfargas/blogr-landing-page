@@ -27,6 +27,9 @@ body{
         text-decoration: none;
         color: inherit;
         cursor: pointer;
+        &:link {
+            text-decoration: none;
+        }
     }
     .container-fluid{
         display: flex;
@@ -99,6 +102,14 @@ header{
                 height: max-content;
                 list-style-type: none;
                 position: relative;
+                &:focus-within{
+                    ul{
+                        display: block;
+                        position: absolute;
+                        background-color: white;
+                        border-radius: 5px;
+                    }
+                }
                 a{
                     display: block;
                     height: 100%;
@@ -140,6 +151,11 @@ header{
                             border: transparent;
                             border-radius: 20px;
                             border-width: 0.5px;
+                            &:hover{
+                                background-color: hsl(0, 0%, 100%);
+                                color: hsl(353, 100%, 62%);
+                                cursor: pointer;
+                            }
                         }
                     }
                     .nav-btn-signup{
@@ -154,6 +170,11 @@ header{
                             border-radius: 20px;
                             border-width: 0.5px;
                             border: transparent;
+                            &:hover{
+                                background-color: hsl(355, 100%, 74%);
+                                color: hsl(0, 0%, 100%);
+                                cursor: pointer;
+                            }
                         }
                     }
                 }
@@ -201,34 +222,51 @@ header{
             flex-direction: row;
             justify-content: center;
             z-index: 19;
-            button{
-                border-radius: 25px;
-                border-width: 1px;
-                width: 8rem;
-                padding: 1em;
-                margin: 1rem;
-                .start-free-btn{
+            .start-free-btn{
+                button{
+                    border-radius: 25px;
+                    border-width: 1px;
+                    width: 8rem;
+                    padding: 1em;
+                    margin: 1rem;
                     border: 1px solid white;
                     background-color: white;
                     color: hsl(353, 100%, 62%);
                     font-family: $font-fancy;
                     font-weight: 600;
+                    &:hover{
+                        background-color: hsl(355, 100%, 74%);
+                        color: hsl(0, 0%, 100%);
+                        cursor: pointer;
+                    }
                 }
-                .learn-more-btn{
+            }
+            .learn-more-btn{
+                button{
                     border: 1px solid white;
                     background-color: transparent;
                     color: white;
                     font-family: $font-fancy;
                     font-weight: 600;
+                    border-radius: 25px;
+                    border-width: 1px;
+                    width: 8rem;
+                    padding: 1em;
+                    margin: 1rem;
+                    &:hover{
+                        background-color: hsl(0, 0%, 100%);
+                        color: hsl(353, 100%, 62%);
+                        cursor: pointer;
+                    }
                 }
             }
-        }
+        }  
     }
 }
 
 .section-2{
     height: 115vh;
-    .section-2-header{
+    h2{
         text-align: center;
         padding: 1em;
         color: $dark-indigo
@@ -243,9 +281,8 @@ header{
                 color: $dark-indigo;
             }
         }
-        .desktop-img{
+        img{
             width: 50%;
-            height: 100%;
             margin-right: -35%;
         }
     }
@@ -297,7 +334,7 @@ footer.footer-menu{
     border-radius: 0px 100px 0px 0px;
     width: 100%;
     display: flex;
-    flex-flow: row;
+    flex-direction: row;
     overflow: auto;
     .footer-logo{
         color:hsl(0, 0%, 100%);
@@ -353,7 +390,7 @@ footer.footer-menu{
 }
 
     // **** MOBILE MEDIA QUERY ****
-@media (min-width: 325px) and (max-width: 425px){
+@media (min-width: 300px) and (max-width: 425px){
 
     // body{
     //     width: 100vw;
@@ -504,11 +541,6 @@ footer.footer-menu{
         display: none;
     }
 
-    .desktop-img{
-        width: 90%;
-        justify-content: center;
-    }
-
     .section-2{
         flex-direction: column;
         width: 100%;
@@ -530,10 +562,10 @@ footer.footer-menu{
                     margin: auto;
                     padding: 1em;
                 } 
-                img{
-                    margin: auto;
-                    justify-content: center;
-                }
+            }
+            img{
+                margin: auto;
+                justify-content: center;
             }
         }
     }
@@ -542,15 +574,20 @@ footer.footer-menu{
         flex-direction: column;
         height: max-content;
         text-align: center;
+        padding-bottom: 2rem;
         img{
             margin-top: -40%;
             justify-self: center;
             width: 100%;
         }
-        p{
+        .s3-text{
             width: 90%;
-            margin: auto;
-            padding: 1em;
+            padding: 0rem;
+            p{
+                width: 90%;
+                margin: auto;
+                padding: 1em;
+            }
         }
     }    
 
@@ -560,8 +597,7 @@ footer.footer-menu{
         height: max-content;
         padding-bottom: 4em;
         img{
-            height: 25vh;
-            width: auto;
+            width: 100%;
             margin: auto;
         }
         p{
@@ -572,29 +608,25 @@ footer.footer-menu{
         }
     }
 
-    .footer-menu{
-        flex-flow: column;
-    }
-
-    footer ul{
+    footer.footer-menu{
         flex-direction: column;
-        text-align: center;
-        padding: 0;
-        margin: auto;
-    }
-
-    footer ul li{
-        margin: auto;
-        padding: 1em;
-    }
-
-    footer ul li ul{
-        margin: auto;
-        padding-top: 1em;
-        opacity: 50%;
+        ul{
+            flex-direction: column;
+            text-align: center;
+            padding: 0;
+            margin: auto;
+            li{
+                margin: auto;
+                padding: 1em;
+                ul{
+                    margin: auto;
+                    padding-top: 1em;
+                    opacity: 50%;
+                }
+            }
+        }
     }
 }
-
 
     // **** TABLET MEDIA QUERY ****
 @media (min-width: 501px) and (max-width: 836px){
@@ -647,7 +679,7 @@ footer.footer-menu{
     }
 
     .footer-menu{
-        flex-flow: column;
+        flex-direction: column;
         .footer-logo {
             color: rgb(255, 255, 255);
         }
