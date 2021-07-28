@@ -36,10 +36,17 @@ Users should be able to:
 
 ## My process
 
+Originally, I constructed the site with Vanilla HTML, CSS, and JS.
+While the process was an initial success, I came across issues that required me to look further into. I have recently grown accustomed to SASS am circling back to this project's styling to better improve its functionality.
+
+The components of interest were the navbar's submenu section, the hamburger changing, and the multiple SVGs handled throughout this project. For this reason, I am restructuring the Vanilla CSS styling to SASS and will look into SGVO for SVG Optimizing.
+
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- SASS
+- Modern JavaScript
+- SVGO
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
@@ -56,6 +63,13 @@ label{
     font-size: 26px;
     width: 25px;
     float: right;
+}
+
+nav ul li:focus-within ul{
+    display: block;
+    position: absolute;
+    background-color: white;
+    border-radius: 5px;
 }
 ```
 <!-- ```js
