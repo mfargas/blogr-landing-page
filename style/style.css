@@ -8,6 +8,7 @@
 
 body {
   background-color: white;
+  width: 100%;
   font-family: "Overpass", sans-serif;
   font-size: 16px;
   color: #25252d;
@@ -32,6 +33,7 @@ body .container-fluid {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
 }
 
 header {
@@ -108,7 +110,7 @@ header nav {
   width: 100%;
 }
 
-header nav ul.navbar-left {
+header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -124,7 +126,7 @@ header nav ul.navbar-left {
   width: 90%;
 }
 
-header nav ul.navbar-left li.nav-toggle-link {
+header nav ul li.nav-toggle-link {
   font-size: 0.75rem;
   font-weight: 600;
   height: -webkit-max-content;
@@ -134,14 +136,14 @@ header nav ul.navbar-left li.nav-toggle-link {
   position: relative;
 }
 
-header nav ul.navbar-left li.nav-toggle-link:focus-within ul {
+header nav ul li.nav-toggle-link:focus-within ul {
   display: block;
   position: absolute;
   background-color: white;
   border-radius: 5px;
 }
 
-header nav ul.navbar-left li.nav-toggle-link a {
+header nav ul li.nav-toggle-link a {
   display: block;
   height: 100%;
   padding: 10px;
@@ -149,7 +151,7 @@ header nav ul.navbar-left li.nav-toggle-link a {
   color: white;
 }
 
-header nav ul.navbar-left li.nav-toggle-link ul.inside-menu {
+header nav ul li.nav-toggle-link ul.inside-menu {
   display: none;
   padding: 10px;
   position: absolute;
@@ -158,17 +160,17 @@ header nav ul.navbar-left li.nav-toggle-link ul.inside-menu {
   margin-top: 5px;
 }
 
-header nav ul.navbar-left li.nav-toggle-link ul.inside-menu li {
+header nav ul li.nav-toggle-link ul.inside-menu li {
   width: 100px;
   font-size: 10px;
 }
 
-header nav ul.navbar-left li.nav-toggle-link ul.inside-menu li a {
+header nav ul li.nav-toggle-link ul.inside-menu li a {
   padding: 2px;
   text-align: left;
 }
 
-header nav ul.navbar-left li.nav-toggle-link .account-action {
+header nav ul li.nav-toggle-link .account-action {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -181,7 +183,7 @@ header nav ul.navbar-left li.nav-toggle-link .account-action {
   padding: 1rem 4rem;
 }
 
-header nav ul.navbar-left li.nav-toggle-link .account-action .nav-btn-login button {
+header nav ul li.nav-toggle-link .account-action .nav-btn-login button {
   background-color: transparent;
   font-family: "Ubuntu", sans-serif;
   font-weight: 600;
@@ -194,13 +196,13 @@ header nav ul.navbar-left li.nav-toggle-link .account-action .nav-btn-login butt
   border-width: 0.5px;
 }
 
-header nav ul.navbar-left li.nav-toggle-link .account-action .nav-btn-login button:hover {
+header nav ul li.nav-toggle-link .account-action .nav-btn-login button:hover {
   background-color: white;
   color: #ff3d54;
   cursor: pointer;
 }
 
-header nav ul.navbar-left li.nav-toggle-link .account-action .nav-btn-signup button {
+header nav ul li.nav-toggle-link .account-action .nav-btn-signup button {
   font-family: "Ubuntu", sans-serif;
   font-weight: 600;
   background-color: white;
@@ -213,7 +215,7 @@ header nav ul.navbar-left li.nav-toggle-link .account-action .nav-btn-signup but
   border: transparent;
 }
 
-header nav ul.navbar-left li.nav-toggle-link .account-action .nav-btn-signup button:hover {
+header nav ul li.nav-toggle-link .account-action .nav-btn-signup button:hover {
   background-color: #ff7a85;
   color: white;
   cursor: pointer;
@@ -493,18 +495,6 @@ footer.footer-menu ul li ul li a {
 }
 
 @media (min-width: 300px) and (max-width: 425px) {
-  .burger {
-    display: block;
-    position: fixed;
-    right: 1em;
-    top: 1em;
-  }
-  .burger-input {
-    display: block;
-    position: fixed;
-    right: 1em;
-    top: 1em;
-  }
   header {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -518,13 +508,14 @@ footer.footer-menu ul li ul li a {
     width: 100%;
   }
   header .navbar-logo {
+    padding: 0rem;
     height: 3rem;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
   }
   header .navbar-logo svg {
-    height: 60%;
-    position: absolute;
-    top: 40%;
-    left: 5%;
+    height: 100%;
   }
   header nav {
     -webkit-box-orient: vertical;
@@ -535,15 +526,33 @@ footer.footer-menu ul li ul li a {
     margin: 0;
     padding: 0;
   }
-  header nav ul.navbar-left {
+  header nav .burger {
+    display: block;
+    position: fixed;
+    right: 1em;
+    top: 1em;
+  }
+  header nav .burger-input {
+    display: block;
+    position: fixed;
+    right: 1em;
+    top: 1em;
+  }
+  header nav ul {
     display: none;
     background-color: white;
     border-radius: 10px;
     width: 75vw;
+    color: #1f3f5b;
     height: auto;
     margin: auto;
+    position: fixed;
+    top: 10%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
-  header nav ul.navbar-left a {
+  header nav ul a {
     color: #1f3f5b;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -562,7 +571,7 @@ footer.footer-menu ul li ul li a {
         -ms-flex-align: baseline;
             align-items: baseline;
   }
-  header nav ul.navbar-left li.nav-toggle-link {
+  header nav ul li.nav-toggle-link {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -570,15 +579,16 @@ footer.footer-menu ul li ul li a {
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
-    color: #1f3f5b;
     font-size: 1em;
     z-index: 7;
     margin: auto;
     text-align: center;
-    display: contents;
     direction: inherit;
   }
-  header nav ul.navbar-left li.nav-toggle-link ul.inside-menu {
+  header nav ul li.nav-toggle-link a {
+    color: #1f3f5b;
+  }
+  header nav ul li.nav-toggle-link ul.inside-menu {
     display: none;
     position: absolute;
     -webkit-box-orient: vertical;
@@ -595,7 +605,7 @@ footer.footer-menu ul li ul li a {
     margin-left: auto;
     margin-right: auto;
   }
-  header nav ul.navbar-left li.nav-toggle-link .account-action {
+  header nav ul li.nav-toggle-link .account-action {
     bottom: 5em;
     text-align: center;
     width: 90%;
@@ -704,6 +714,7 @@ footer.footer-menu ul li ul li a {
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
+    width: 100%;
     text-align: center;
     padding-bottom: 2rem;
   }
@@ -732,6 +743,7 @@ footer.footer-menu ul li ul li a {
     height: -moz-max-content;
     height: max-content;
     padding-bottom: 4em;
+    width: 100%;
   }
   .section-4 img {
     width: 100%;
@@ -770,6 +782,9 @@ footer.footer-menu ul li ul li a {
 }
 
 @media (min-width: 501px) and (max-width: 836px) {
+  nav a.navbar-logo {
+    padding: 0rem;
+  }
   nav ul {
     color: #25252d;
     text-align: center;

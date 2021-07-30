@@ -19,6 +19,7 @@ $peach: hsl(355, 100%, 74%);
 
 body{
     background-color: white;
+    width: 100%;
     font-family: $font-gen;
     font-size: 16px;
     color: $almost-black;
@@ -34,6 +35,7 @@ body{
     .container-fluid{
         display: flex;
         flex-direction: column;
+        width: 100%;
     }
 }
 
@@ -89,7 +91,7 @@ header{
         flex-flow: row;
         justify-content: space-between;
         width: 100%;
-        ul.navbar-left{
+        ul{
             display: flex;
             flex-flow: row;
             list-style-type: none;
@@ -399,20 +401,6 @@ footer.footer-menu{
     //     }
     // }
 
-    .burger{
-        display: block;
-        position: fixed;
-        right: 1em;
-        top: 1em;
-    }
-
-    .burger-input{
-        display: block;
-        position: fixed;
-        right: 1em;
-        top: 1em;
-    }
-
     header{
         flex-direction: column;
         margin: auto;
@@ -420,12 +408,13 @@ footer.footer-menu{
         height: max-content;
         width: 100%;
         .navbar-logo{
+            padding: 0rem;
             height: 3rem;
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
             svg{
-                height: 60%;
-                position: absolute;
-                top: 40%;
-                left: 5%;
+                height: 100%;
             }
         }
         nav{
@@ -433,13 +422,29 @@ footer.footer-menu{
             height: 100%;
             margin: 0;
             padding: 0;
-            ul.navbar-left{
+            .burger{
+                display: block;
+                position: fixed;
+                right: 1em;
+                top: 1em;
+            }
+            .burger-input{
+                display: block;
+                position: fixed;
+                right: 1em;
+                top: 1em;
+            }
+            ul{
                 display: none;
                 background-color: white;
                 border-radius: 10px;
                 width: 75vw;
+                color: $dark-indigo;
                 height: auto;
                 margin: auto;
+                position: fixed;
+                top: 10%;
+                align-self: center;
                 a{
                     color: $dark-indigo;
                     display: flex;
@@ -451,13 +456,14 @@ footer.footer-menu{
                 li.nav-toggle-link{
                     flex-direction: column;
                     height: max-content;
-                    color: $dark-indigo;
                     font-size: 1em;
                     z-index: 7;
                     margin: auto;
                     text-align: center;
-                    display: contents;
                     direction: inherit;
+                    a{
+                        color: $dark-indigo;
+                    }
                     ul.inside-menu{
                         display: none;
                         position: absolute;
@@ -573,6 +579,7 @@ footer.footer-menu{
     .section-3{
         flex-direction: column;
         height: max-content;
+        width: 100%;
         text-align: center;
         padding-bottom: 2rem;
         img{
@@ -596,6 +603,7 @@ footer.footer-menu{
         text-align: center;
         height: max-content;
         padding-bottom: 4em;
+        width: 100%;
         img{
             width: 100%;
             margin: auto;
@@ -631,6 +639,9 @@ footer.footer-menu{
     // **** TABLET MEDIA QUERY ****
 @media (min-width: 501px) and (max-width: 836px){
     nav{
+        a.navbar-logo{
+            padding: 0rem;
+        }
         ul{
             color: $almost-black;
             text-align: center;
