@@ -320,8 +320,9 @@ header nav ul li.nav-toggle-link .account-action .nav-btn-signup button:hover {
 }
 
 .section-2 h2 {
+  font-size: 2rem;
   text-align: center;
-  padding: 1em;
+  padding-top: 3em;
   color: #1f3f5b;
 }
 
@@ -338,6 +339,9 @@ header nav ul li.nav-toggle-link .account-action .nav-btn-signup button:hover {
 }
 
 .section-2 .section-2-content .left-side-s2 h3 {
+  font-size: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   color: #1f3f5b;
 }
 
@@ -370,9 +374,20 @@ header nav ul li.nav-toggle-link .account-action .nav-btn-signup button:hover {
 }
 
 .section-3 .s3-text {
-  width: 75%;
   margin: auto;
   padding: 1em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.section-3 .s3-text h2 {
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
+}
+
+.section-3 .s3-text p {
+  max-width: 36rem;
 }
 
 .section-4 {
@@ -402,7 +417,14 @@ header nav ul li.nav-toggle-link .account-action .nav-btn-signup button:hover {
 }
 
 .section-4 .s4-text h3 {
+  font-size: 1.75rem;
+  padding-top: 1rem;
   color: #1f3f5b;
+}
+
+.section-4 .s4-text p {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 footer.footer-menu {
@@ -424,7 +446,9 @@ footer.footer-menu .footer-logo {
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
   font-size: 2.5em;
-  padding: 2em;
+  position: absolute;
+  padding-top: 3.5rem;
+  padding-left: 1rem;
 }
 
 footer.footer-menu .footer-logo a {
@@ -452,7 +476,8 @@ footer.footer-menu ul {
 footer.footer-menu ul li {
   list-style-type: none;
   text-decoration: none;
-  padding: 4em;
+  padding-top: 4em;
+  padding-bottom: 1rem;
   font-size: 1em;
   -webkit-box-pack: stretch;
       -ms-flex-pack: stretch;
@@ -484,7 +509,8 @@ footer.footer-menu ul li ul li {
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
-  padding: 0px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 footer.footer-menu ul li ul li a {
@@ -680,6 +706,7 @@ footer.footer-menu ul li ul li a {
             justify-content: center;
     text-align: center;
     margin: auto;
+    padding-top: 2rem;
   }
   .section-2 .section-2-content {
     -webkit-box-orient: vertical;
@@ -701,6 +728,7 @@ footer.footer-menu ul li ul li a {
     padding: 1em;
   }
   .section-2 .section-2-content img {
+    width: 75%;
     margin: auto;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -782,18 +810,18 @@ footer.footer-menu ul li ul li a {
 }
 
 @media (min-width: 501px) and (max-width: 836px) {
-  nav a.navbar-logo {
+  header nav a.navbar-logo {
     padding: 0rem;
   }
-  nav ul {
+  header nav ul {
     color: #25252d;
     text-align: center;
   }
-  nav ul li {
+  header nav ul li {
     color: #25252d;
     text-align: center;
   }
-  nav ul li a {
+  header nav ul li a {
     color: #25252d;
   }
   .section-2 {
