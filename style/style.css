@@ -53,17 +53,18 @@ header {
   padding: 3em;
   top: 0;
   z-index: 20;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
-header h2 {
+header a.navbar-logo {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  width: 20%;
-}
-
-header h2 a {
-  font-size: 1.5em;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 header ul a:link {
@@ -122,7 +123,9 @@ header nav ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  vertical-align: middle;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 90%;
 }
 
@@ -346,7 +349,7 @@ header nav ul li.nav-toggle-link .account-action .nav-btn-signup button:hover {
 }
 
 .section-2 .section-2-content img {
-  width: 50%;
+  width: 50vw;
   margin-right: -35%;
 }
 
@@ -394,6 +397,8 @@ header nav ul li.nav-toggle-link .account-action .nav-btn-signup button:hover {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -405,7 +410,8 @@ header nav ul li.nav-toggle-link .account-action .nav-btn-signup button:hover {
 
 .section-4 img {
   margin-left: -30%;
-  height: 20%;
+  height: 100%;
+  width: 50vw;
   margin-top: auto;
   margin-bottom: auto;
 }
@@ -788,6 +794,11 @@ footer.footer-menu ul li ul li a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  footer.footer-menu .footer-logo {
+    position: inherit;
+    padding-left: 0rem;
+    padding-bottom: 2rem;
   }
   footer.footer-menu ul {
     -webkit-box-orient: vertical;

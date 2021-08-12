@@ -50,12 +50,10 @@ header{
     padding: 3em;
     top: 0;
     z-index: 20;
-    h2{
+    align-items: baseline;
+    a.navbar-logo{
         height: max-content;
-        width: 20%;
-        a{
-            font-size: 1.5em;
-        }
+        width: max-content;
     }
     ul a:link {
         text-decoration: none;
@@ -96,7 +94,7 @@ header{
             flex-flow: row;
             list-style-type: none;
             justify-content: space-between;
-            vertical-align: middle;
+            align-items: center;
             width: 90%;
             li.nav-toggle-link{
                 font-size: 0.75rem;
@@ -289,7 +287,7 @@ header{
             }
         }
         img{
-            width: 50%;
+            width: 50vw;
             margin-right: -35%;
         }
     }
@@ -323,11 +321,14 @@ header{
 
 .section-4{
     height: max-content;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     display: flex;
     flex-direction: row;
     img{
         margin-left: -30%;
-        height: 20%;
+        height: 100%;
+        width: 50vw;
         margin-top: auto;
         margin-bottom: auto;
     }
@@ -642,6 +643,11 @@ footer.footer-menu{
 
     footer.footer-menu{
         flex-direction: column;
+        .footer-logo{
+            position: inherit;
+            padding-left: 0rem;
+            padding-bottom: 2rem;
+        }
         ul{
             flex-direction: column;
             text-align: center;
