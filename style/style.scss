@@ -9,6 +9,7 @@ $dark-smoke: hsl(207, 13%, 34%);
 $grey-blue: hsl(240, 2%, 79%);
 $light-red: hsl(356, 100%, 66%);
 $peach: hsl(355, 100%, 74%);
+$white: hsl(0, 0%, 100%);
 
 
 *{
@@ -45,7 +46,6 @@ header{
     flex-flow: row;
     position: fixed;
     width: 100%;
-    height: 3em;
     color: white;
     padding: 3em;
     top: 0;
@@ -87,7 +87,7 @@ header{
     nav{
         display: flex;
         flex-flow: row;
-        justify-content: space-between;
+        justify-content: flex-end;
         width: 100%;
         ul{
             display: flex;
@@ -357,18 +357,6 @@ footer.footer-menu{
     display: flex;
     flex-direction: row;
     overflow: auto;
-    .footer-logo{
-        color:hsl(0, 0%, 100%);
-        font-family: $font-fancy;
-        font-weight: 500;
-        font-size: 2.5em;
-        position: absolute;
-        padding-top: 3.5rem;
-        padding-left: 1rem;
-        a{
-            font-family: $font-fancy;
-        }
-    }
     ul{
         color:hsl(0, 0%, 100%);
         display: flex;
@@ -378,6 +366,16 @@ footer.footer-menu{
         justify-content: space-evenly;
         font-size: 1em;
         width: 100%;
+        .footer-logo{
+            color:hsl(0, 0%, 100%);
+            font-family: $font-fancy;
+            font-weight: 500;
+            font-size: 2.5em;
+            position: absolute;
+            a{
+                font-family: $font-fancy;
+            }
+        }
         li{
             list-style-type: none;
             text-decoration: none;
@@ -460,8 +458,8 @@ footer.footer-menu{
             ul{
                 display: none;
                 background-color: white;
-                border-radius: 10px;
-                width: 75vw;
+                border-radius: 5px;
+                width: 80vw;
                 color: $dark-indigo;
                 height: auto;
                 margin: auto;
@@ -479,25 +477,32 @@ footer.footer-menu{
                 li.nav-toggle-link{
                     flex-direction: column;
                     height: max-content;
+                    width: 90%;
                     font-size: 1em;
                     z-index: 7;
                     margin: auto;
                     text-align: center;
                     direction: inherit;
-                    a{
+                    a.dropdown{
                         color: $dark-indigo;
+                        display: flex;
                     }
                     ul.inside-menu{
-                        display: none;
-                        position: absolute;
+                        display: table;
+                        position: inherit;
                         flex-direction: column;
-                        background-color: hsl(240, 20%, 52%);
+                        background-color: $grey-blue;
+                        color: $dark-indigo;
                         content-visibility: hidden;
                         height: max-content;
                         width: 80%;
                         margin-top: 1em;
                         margin-left: auto;
                         margin-right: auto;
+                        li{
+                            text-align: center;
+                            margin: auto;
+                        }
                     }
                     .account-action{
                         bottom: 5em;
@@ -507,7 +512,30 @@ footer.footer-menu{
                         padding: 0;
                         margin: auto;
                         color: $dark-indigo;
+                        flex-direction: column;
                         background-color: white;
+                        .nav-btn-login{
+                            button{
+                                background-color: transparent;
+                                color: $dark-smoke;
+                                margin: auto;
+                                padding: 1em;
+                                border: transparent;
+                                border-radius: 20px;
+                                border-width: 0.5px;
+                            }
+                        }
+                        .nav-btn-signup{
+                            button{
+                                background-color: $peach;
+                                color: $white;
+                                margin: auto;
+                                padding: 1em;
+                                border-radius: 20px;
+                                border-width: 0.5px;
+                                border: transparent;   
+                            }
+                        }
                     }
                 }
             }
@@ -538,26 +566,6 @@ footer.footer-menu{
 
     .nav-breaker{
         display: initial;
-    }
-
-    .nav-btn-login button{
-        background-color: transparent;
-        color: hsl(0, 0%, 100%);
-        margin: auto;
-        padding: 1em;
-        border: transparent;
-        border-radius: 20px;
-        border-width: 0.5px;
-    }
-
-    .nav-btn-signup button{
-        background-color: hsl(0, 0%, 100%);
-        color: hsl(353, 100%, 62%);
-        margin: auto;
-        padding: 1em;
-        border-radius: 20px;
-        border-width: 0.5px;
-        border: transparent;   
     }
 
     .account-action button{
