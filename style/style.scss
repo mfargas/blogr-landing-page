@@ -139,6 +139,9 @@ header{
                     width: max-content;
                     margin: auto;
                     padding: 1rem 4rem;
+                    .mobile-breaker{
+                        display: none;
+                    }
                     .nav-btn-login{
                         button{
                             background-color: transparent;
@@ -483,7 +486,7 @@ footer.footer-menu{
                     margin: auto;
                     text-align: center;
                     direction: inherit;
-                    a.dropdown{
+                    a{
                         color: $dark-indigo;
                         display: flex;
                     }
@@ -495,13 +498,14 @@ footer.footer-menu{
                         color: $dark-indigo;
                         content-visibility: hidden;
                         height: max-content;
-                        width: 80%;
-                        margin-top: 1em;
-                        margin-left: auto;
-                        margin-right: auto;
+                        width: 90%;
+                        margin: auto;
                         li{
                             text-align: center;
                             margin: auto;
+                            a{
+                                color: $dark-indigo;
+                            }
                         }
                     }
                     .account-action{
@@ -514,6 +518,11 @@ footer.footer-menu{
                         color: $dark-indigo;
                         flex-direction: column;
                         background-color: white;
+                        .mobile-breaker{
+                            margin-top: 1rem;
+                            opacity: 25%;
+                            display: block;
+                        }
                         .nav-btn-login{
                             button{
                                 background-color: transparent;
@@ -527,7 +536,7 @@ footer.footer-menu{
                         }
                         .nav-btn-signup{
                             button{
-                                background-color: $peach;
+                                background-color: $light-red;
                                 color: $white;
                                 margin: auto;
                                 padding: 1em;
