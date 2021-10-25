@@ -96,7 +96,7 @@ header{
             justify-content: space-between;
             align-items: center;
             width: 90%;
-            li.nav-toggle-link{
+            .nav-toggle-link{
                 font-size: 0.75rem;
                 font-weight: 600;
                 height: max-content;
@@ -117,7 +117,7 @@ header{
                     text-decoration: none;
                     color: white;
                 }
-                ul.inside-menu{
+                .inside-menu{
                     display: none;
                     padding: 10px;
                     position: absolute;
@@ -490,8 +490,8 @@ footer.footer-menu{
                         color: $dark-indigo;
                         display: flex;
                     }
-                    ul.inside-menu{
-                        display: table;
+                    .inside-menu{
+                        display: none;
                         position: inherit;
                         flex-direction: column;
                         background-color: $grey-blue;
@@ -507,6 +507,9 @@ footer.footer-menu{
                                 color: $dark-indigo;
                             }
                         }
+                    }
+                    .subMenuShow {
+                        display: table;
                     }
                     .account-action{
                         bottom: 5em;
@@ -554,10 +557,6 @@ footer.footer-menu{
     .menuToggle{
         display: flex;
         flex-direction: column;
-    }
-
-    .subMenuShow {
-        content-visibility: show;
     }
 
     .carrot{

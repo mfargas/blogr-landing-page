@@ -128,7 +128,7 @@ header nav ul {
   width: 90%;
 }
 
-header nav ul li.nav-toggle-link {
+header nav ul .nav-toggle-link {
   font-size: 0.75rem;
   font-weight: 600;
   height: -webkit-max-content;
@@ -138,14 +138,14 @@ header nav ul li.nav-toggle-link {
   position: relative;
 }
 
-header nav ul li.nav-toggle-link:focus-within ul {
+header nav ul .nav-toggle-link:focus-within ul {
   display: block;
   position: absolute;
   background-color: white;
   border-radius: 5px;
 }
 
-header nav ul li.nav-toggle-link a {
+header nav ul .nav-toggle-link a {
   display: block;
   height: 100%;
   padding: 10px;
@@ -153,7 +153,7 @@ header nav ul li.nav-toggle-link a {
   color: white;
 }
 
-header nav ul li.nav-toggle-link ul.inside-menu {
+header nav ul .nav-toggle-link .inside-menu {
   display: none;
   padding: 10px;
   position: absolute;
@@ -162,17 +162,17 @@ header nav ul li.nav-toggle-link ul.inside-menu {
   margin-top: 5px;
 }
 
-header nav ul li.nav-toggle-link ul.inside-menu li {
+header nav ul .nav-toggle-link .inside-menu li {
   width: 100px;
   font-size: 10px;
 }
 
-header nav ul li.nav-toggle-link ul.inside-menu li a {
+header nav ul .nav-toggle-link .inside-menu li a {
   padding: 2px;
   text-align: left;
 }
 
-header nav ul li.nav-toggle-link .account-action {
+header nav ul .nav-toggle-link .account-action {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -185,11 +185,11 @@ header nav ul li.nav-toggle-link .account-action {
   padding: 1rem 4rem;
 }
 
-header nav ul li.nav-toggle-link .account-action .mobile-breaker {
+header nav ul .nav-toggle-link .account-action .mobile-breaker {
   display: none;
 }
 
-header nav ul li.nav-toggle-link .account-action .nav-btn-login button {
+header nav ul .nav-toggle-link .account-action .nav-btn-login button {
   background-color: transparent;
   font-family: "Ubuntu", sans-serif;
   font-weight: 600;
@@ -202,13 +202,13 @@ header nav ul li.nav-toggle-link .account-action .nav-btn-login button {
   border-width: 0.5px;
 }
 
-header nav ul li.nav-toggle-link .account-action .nav-btn-login button:hover {
+header nav ul .nav-toggle-link .account-action .nav-btn-login button:hover {
   background-color: white;
   color: #ff3d54;
   cursor: pointer;
 }
 
-header nav ul li.nav-toggle-link .account-action .nav-btn-signup button {
+header nav ul .nav-toggle-link .account-action .nav-btn-signup button {
   font-family: "Ubuntu", sans-serif;
   font-weight: 600;
   background-color: white;
@@ -221,7 +221,7 @@ header nav ul li.nav-toggle-link .account-action .nav-btn-signup button {
   border: transparent;
 }
 
-header nav ul li.nav-toggle-link .account-action .nav-btn-signup button:hover {
+header nav ul .nav-toggle-link .account-action .nav-btn-signup button:hover {
   background-color: #ff7a85;
   color: white;
   cursor: pointer;
@@ -625,8 +625,8 @@ footer.footer-menu ul li ul li a {
     display: -ms-flexbox;
     display: flex;
   }
-  header nav ul li.nav-toggle-link ul.inside-menu {
-    display: table;
+  header nav ul li.nav-toggle-link .inside-menu {
+    display: none;
     position: inherit;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -641,12 +641,15 @@ footer.footer-menu ul li ul li a {
     width: 90%;
     margin: auto;
   }
-  header nav ul li.nav-toggle-link ul.inside-menu li {
+  header nav ul li.nav-toggle-link .inside-menu li {
     text-align: center;
     margin: auto;
   }
-  header nav ul li.nav-toggle-link ul.inside-menu li a {
+  header nav ul li.nav-toggle-link .inside-menu li a {
     color: #1f3f5b;
+  }
+  header nav ul li.nav-toggle-link .subMenuShow {
+    display: table;
   }
   header nav ul li.nav-toggle-link .account-action {
     bottom: 5em;
@@ -693,9 +696,6 @@ footer.footer-menu ul li ul li a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-  .subMenuShow {
-    content-visibility: show;
   }
   .carrot {
     display: block;

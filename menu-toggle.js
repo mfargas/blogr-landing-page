@@ -5,18 +5,21 @@ const mediaQueryMobile = window.matchMedia('(max-width: 425px)')
 
 const mobileMenu = document.querySelector(".burger-input");
 const nav = document.querySelector(".navbar-left");
-const mobileSub = document.querySelector(".dropdown");
-const subNav = document.querySelector(".inside-menu");
+let mobileSub = document.getElementsByClassName("dropdown");
+let subNav = document.getElementsByClassName("inside-menu");
 
 function handleScreenResize(e){
     if(e.matches){
         mobileMenu.addEventListener('click', () => {
             nav.classList.toggle("menuToggle");
         });
-        mobileSub.addEventListener('click', () => {
-            subNav.classList.toggle("subMenuShow");
-        });
-    } 
+        for(let i = 0 ; i < mobileSub.length; i++){
+            let childEl = mobileSub[i];
+            let matchingSub = subNav[i]
+            childEl.addEventListener('click', () => {
+                matchingSub.style.display = matchingSub.style.display == 'none' ? 'table' : 'none';
+        })}
+    }
 }
 
 mediaQueryMobile.addListener(handleScreenResize)
