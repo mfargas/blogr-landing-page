@@ -477,7 +477,7 @@ footer.footer-menu{
                     height: min-content;
                     align-items: baseline;
                 }
-                li.nav-toggle-link{
+                .nav-toggle-link{
                     flex-direction: column;
                     height: max-content;
                     width: 90%;
@@ -496,7 +496,6 @@ footer.footer-menu{
                         flex-direction: column;
                         background-color: $grey-blue;
                         color: $dark-indigo;
-                        content-visibility: hidden;
                         height: max-content;
                         width: 90%;
                         margin: auto;
@@ -659,17 +658,16 @@ footer.footer-menu{
 
     footer.footer-menu{
         flex-direction: column;
-        .footer-logo{
-            position: inherit;
-            padding-left: 0rem;
-            padding-bottom: 2rem;
-        }
         ul{
             flex-direction: column;
             text-align: center;
-            padding: 0;
+            padding: 1rem 0;
             margin: auto;
             li{
+                .footer-logo{
+                    position: inherit;
+                    padding: 0;
+                }
                 margin: auto;
                 padding: 1em;
                 ul{

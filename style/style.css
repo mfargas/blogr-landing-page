@@ -604,7 +604,7 @@ footer.footer-menu ul li ul li a {
         -ms-flex-align: baseline;
             align-items: baseline;
   }
-  header nav ul li.nav-toggle-link {
+  header nav ul .nav-toggle-link {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -619,13 +619,13 @@ footer.footer-menu ul li ul li a {
     text-align: center;
     direction: inherit;
   }
-  header nav ul li.nav-toggle-link a {
+  header nav ul .nav-toggle-link a {
     color: #1f3f5b;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  header nav ul li.nav-toggle-link .inside-menu {
+  header nav ul .nav-toggle-link .inside-menu {
     display: none;
     position: inherit;
     -webkit-box-orient: vertical;
@@ -634,24 +634,23 @@ footer.footer-menu ul li ul li a {
             flex-direction: column;
     background-color: #c8c8cb;
     color: #1f3f5b;
-    content-visibility: hidden;
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
     width: 90%;
     margin: auto;
   }
-  header nav ul li.nav-toggle-link .inside-menu li {
+  header nav ul .nav-toggle-link .inside-menu li {
     text-align: center;
     margin: auto;
   }
-  header nav ul li.nav-toggle-link .inside-menu li a {
+  header nav ul .nav-toggle-link .inside-menu li a {
     color: #1f3f5b;
   }
-  header nav ul li.nav-toggle-link .subMenuShow {
+  header nav ul .nav-toggle-link .subMenuShow {
     display: table;
   }
-  header nav ul li.nav-toggle-link .account-action {
+  header nav ul .nav-toggle-link .account-action {
     bottom: 5em;
     text-align: center;
     width: 90%;
@@ -665,12 +664,12 @@ footer.footer-menu ul li ul li a {
             flex-direction: column;
     background-color: white;
   }
-  header nav ul li.nav-toggle-link .account-action .mobile-breaker {
+  header nav ul .nav-toggle-link .account-action .mobile-breaker {
     margin-top: 1rem;
     opacity: 25%;
     display: block;
   }
-  header nav ul li.nav-toggle-link .account-action .nav-btn-login button {
+  header nav ul .nav-toggle-link .account-action .nav-btn-login button {
     background-color: transparent;
     color: #4b5862;
     margin: auto;
@@ -679,7 +678,7 @@ footer.footer-menu ul li ul li a {
     border-radius: 20px;
     border-width: 0.5px;
   }
-  header nav ul li.nav-toggle-link .account-action .nav-btn-signup button {
+  header nav ul .nav-toggle-link .account-action .nav-btn-signup button {
     background-color: #ff525d;
     color: white;
     margin: auto;
@@ -815,23 +814,22 @@ footer.footer-menu ul li ul li a {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  footer.footer-menu .footer-logo {
-    position: inherit;
-    padding-left: 0rem;
-    padding-bottom: 2rem;
-  }
   footer.footer-menu ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     text-align: center;
-    padding: 0;
+    padding: 1rem 0;
     margin: auto;
   }
   footer.footer-menu ul li {
     margin: auto;
     padding: 1em;
+  }
+  footer.footer-menu ul li .footer-logo {
+    position: inherit;
+    padding: 0;
   }
   footer.footer-menu ul li ul {
     margin: auto;

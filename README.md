@@ -2,6 +2,8 @@
 
 This is a solution to the [Blogr landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/blogr-landing-page-EX2RLAApP). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
+![](assets/design/desktop-preview.jpg)
+
 ## Table of contents
 
 - [Overview](#overview)
@@ -18,16 +20,20 @@ This is a solution to the [Blogr landing page challenge on Frontend Mentor](http
 
 ## Overview
 
+Frontend Mentor challenges help creators practice constructing websites of various layouts using a variety of methods. As one of the first Frontend Mentor challenges I tackled, I primarily used Vanilla HTML, JavaScript and CSS with the SASS extention.
+
+This challenge's learning curve I tackled:
+- implementation of multi-level navigation
+- ensuring mobile navigation reacts accordingly
+
 ### The challenge
 
 Users should be able to:
-
+- Click through a multi-level navigation menu
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
 
-### Screenshot
-
-![](./screenshot.jpg)
+![](assets/images/blogr-sqr.png)
 
 ### Links
 
@@ -37,50 +43,62 @@ Users should be able to:
 ## My process
 
 Originally, I constructed the site with Vanilla HTML, CSS, and JS.
-While the process was an initial success, I came across issues that required me to look further into. I have recently grown accustomed to SASS am circling back to this project's styling to better improve its functionality.
-
-The components of interest were the navbar's submenu section, the hamburger changing, and the multiple SVGs handled throughout this project. For this reason, I am restructuring the Vanilla CSS styling to SASS and will look into SGVO for SVG Optimizing.
+While the process was an initial success, I came across issues that required me to look further into. I circled back and recreated the stylesheets to implement SASS functions such as scoping.
 
 ### Built with
 
 - Semantic HTML5 markup
-- SASS
 - Modern JavaScript
-- SVGO
-- Flexbox
+- SASS - CSS Syntactic Sugar
+- CSS Flexbox
 - CSS Grid
 - Mobile-first workflow
 
 ### What I learned
 
-```html
-<label for="toggle">&#9776;</label>
-<input type="checkbox" id="toggle" />
-```
-```css
-label{
-    display: none;
-    font-size: 26px;
-    width: 25px;
-    float: right;
-}
 
-nav ul li:focus-within ul{
-    display: block;
-    position: absolute;
-    background-color: white;
-    border-radius: 5px;
-}
+#### SASS
+
+SASS stands for Syntactically Awesome StyleSheets which acts as an extension for CSS
+```css
+header{
+        nav{
+            a.navbar-logo{
+                padding: 0rem;
+            }
+            ul{
+                color: $almost-black;
+                text-align: center;
+                li{
+                    color: $almost-black;
+                    text-align: center;
+                    a{
+                        color: $almost-black;
+                    }
+                }
+            }
+        }
+    }
 ```
-<!-- ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-``` -->
+
+#### JavaScript
+
+I've already grown accustomed to media queries in CSS/SASS, yet the question of 'How to implement media queries in JS' popped up for me. This is how I chose to add event listeners for menu togglers within the burger menu.
+
+For the multiple menus within the main menu, we have to parse through each item that comes back when we retrieve each item containing class 'subNav'. Otherwise, JS will only add the event listener to the first item to come back with the matching class.
+
+```js
+for(let i = 0 ; i < mobileSub.length; i++){
+            let childEl = mobileSub[i];
+            let matchingSub = subNav[i]
+            childEl.addEventListener('click', () => {
+                matchingSub.style.display = matchingSub.style.display == 'none' ? 'table' : 'none';
+        })}
+```
 
 ### Continued development
 
-k
+I intend on researching SVGO for Optimizing SVG files incorporated in projects and how it affects performance and speed.
 ### Useful resources
 
 - [Background-positioning](https://css-tricks.com/almanac/properties/b/background-position/) - 
