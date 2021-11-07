@@ -93,6 +93,7 @@ header .navbar-logo {
   text-decoration: none;
   font-family: "Ubuntu", sans-serif;
   font-weight: 600;
+  height: 100%;
   padding: 1rem 4rem;
 }
 
@@ -228,15 +229,14 @@ header nav ul .nav-toggle-link .account-action .nav-btn-signup button:hover {
 }
 
 .intro-section {
-  background-image: -webkit-gradient(linear, left top, right top, from(#ff8f70), color-stop(80%, #ff3d54));
-  background-image: linear-gradient(90deg, #ff8f70, #ff3d54 80%);
-  background-size: 100%;
+  background-image: url("../assets/images/bg-pattern-intro.svg"), -webkit-gradient(linear, left top, right top, from(#ff8f70), color-stop(80%, #ff3d54));
+  background-image: url("../assets/images/bg-pattern-intro.svg"), linear-gradient(90deg, #ff8f70, #ff3d54 80%);
   background-position: 20% 50%;
   border-radius: 0px 0px 0px 100px;
   color: white;
   margin: auto;
   width: 100%;
-  height: 85vh;
+  height: 75vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -358,9 +358,12 @@ header nav ul .nav-toggle-link .account-action .nav-btn-signup button:hover {
 
 .section-3 {
   height: 50vh;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#2c2d3f), to(#3f4164));
-  background-image: linear-gradient(to bottom right, #2c2d3f, #3f4164);
-  border-radius: 0px 50px 0px 50px;
+  background-image: url("../assets/images/bg-pattern-circles.svg"), -webkit-gradient(linear, left top, right bottom, from(#2c2d3f), to(#3f4164));
+  background-image: url("../assets/images/bg-pattern-circles.svg"), linear-gradient(to bottom right, #2c2d3f, #3f4164);
+  background-repeat: no-repeat;
+  background-position-x: -75%;
+  background-position-y: bottom;
+  border-radius: 0px 75px 0px 75px;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -397,6 +400,7 @@ header nav ul .nav-toggle-link .account-action .nav-btn-signup button:hover {
 }
 
 .section-4 {
+  width: 100%;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -506,8 +510,7 @@ footer.footer-menu ul li ul {
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
-  padding: 0;
-  padding-top: 1em;
+  padding: 1em 0;
 }
 
 footer.footer-menu ul li ul li {
@@ -516,15 +519,14 @@ footer.footer-menu ul li ul li {
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 1rem 0;
 }
 
 footer.footer-menu ul li ul li a {
   list-style-type: none;
   text-decoration: none;
   text-align: left;
-  padding: 0px;
+  padding: 0;
 }
 
 @media (min-width: 300px) and (max-width: 425px) {
@@ -704,7 +706,7 @@ footer.footer-menu ul li ul li a {
   }
   .inside-menu-open {
     position: relative;
-    display: inline-block;
+    display: block;
   }
   .nav-breaker {
     display: initial;
@@ -716,6 +718,10 @@ footer.footer-menu ul li ul li a {
   }
   #toggle:checked {
     display: none;
+  }
+  .intro-section {
+    background-position: 40% 50%;
+    background-size: 350%;
   }
   .section-2 {
     -webkit-box-orient: vertical;
@@ -825,16 +831,20 @@ footer.footer-menu ul li ul li a {
   }
   footer.footer-menu ul li {
     margin: auto;
-    padding: 1em;
+    padding: 0;
   }
   footer.footer-menu ul li .footer-logo {
     position: inherit;
-    padding: 0;
+    padding: 1rem 0;
   }
   footer.footer-menu ul li ul {
     margin: auto;
     padding-top: 1em;
     opacity: 50%;
+  }
+  footer.footer-menu ul li ul li {
+    padding: 0;
+    line-height: 2rem;
   }
 }
 

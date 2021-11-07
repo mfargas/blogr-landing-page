@@ -19,7 +19,7 @@ $white: hsl(0, 0%, 100%);
 }
 
 body{
-    background-color: white;
+    background-color: $white;
     width: 100%;
     font-family: $font-gen;
     font-size: 16px;
@@ -82,6 +82,7 @@ header{
         text-decoration: none;
         font-family: $font-fancy;
         font-weight: 600;
+        height: 100%;
         padding: 1rem 4rem;
     }
     nav{
@@ -106,7 +107,7 @@ header{
                     ul{
                         display: block;
                         position: absolute;
-                        background-color: white;
+                        background-color: $white;
                         border-radius: 5px;
                     }
                 }
@@ -189,14 +190,15 @@ header{
 // SECTIONS
 
 .intro-section{
-    background-image: linear-gradient( 90deg ,hsl(13, 100%, 72%), hsl(353, 100%, 62%) 80%);
-    background-size: 100%;
+    background-image: 
+        url('../assets/images/bg-pattern-intro.svg'),
+        linear-gradient( 90deg ,hsl(13, 100%, 72%), hsl(353, 100%, 62%) 80%);
     background-position: 20% 50%;
     border-radius: 0px 0px 0px 100px;
     color: white;
     margin: auto;
     width: 100%;
-    height: 85vh;
+    height: 75vh;
     display: flex;
     text-align: center;
     overflow: auto;
@@ -239,16 +241,16 @@ header{
                     font-weight: 600;
                     &:hover{
                         background-color: hsl(355, 100%, 74%);
-                        color: hsl(0, 0%, 100%);
+                        color: $white;
                         cursor: pointer;
                     }
                 }
             }
             .learn-more-btn{
                 button{
-                    border: 1px solid white;
+                    border: 1px solid $white;
                     background-color: transparent;
-                    color: white;
+                    color: $white;
                     font-family: $font-fancy;
                     font-weight: 600;
                     border-radius: 25px;
@@ -257,7 +259,7 @@ header{
                     padding: 1em;
                     margin: 1rem;
                     &:hover{
-                        background-color: hsl(0, 0%, 100%);
+                        background-color: $white;
                         color: hsl(353, 100%, 62%);
                         cursor: pointer;
                     }
@@ -298,8 +300,13 @@ header{
 
 .section-3{
     height: 50vh;
-    background-image: linear-gradient(to bottom right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
-    border-radius: 0px 50px 0px 50px;
+    background-image: 
+        url('../assets/images/bg-pattern-circles.svg'), 
+        linear-gradient(to bottom right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+    background-repeat: no-repeat;
+    background-position-x: -75%;
+    background-position-y: bottom;
+    border-radius: 0px 75px 0px 75px;
     color: white;
     display: flex;
     flex-direction: row;
@@ -323,6 +330,7 @@ header{
 }
 
 .section-4{
+    width: 100%;
     height: max-content;
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -342,7 +350,7 @@ header{
         h3{
             font-size: 1.75rem;
             padding-top: 1rem;
-            color: hsl(208, 49%, 24%);
+            color: $dark-indigo;
         }
         p{
             padding-top: 1rem;
@@ -354,14 +362,14 @@ header{
 // FOOTER
 
 footer.footer-menu{
-    background-color: hsl(240, 10%, 16%);
+    background-color: $almost-black;
     border-radius: 0px 100px 0px 0px;
     width: 100%;
     display: flex;
     flex-direction: row;
     overflow: auto;
     ul{
-        color:hsl(0, 0%, 100%);
+        color:$white;
         display: flex;
         flex-direction: row;
         list-style-type: none;
@@ -370,7 +378,7 @@ footer.footer-menu{
         font-size: 1em;
         width: 100%;
         .footer-logo{
-            color:hsl(0, 0%, 100%);
+            color: $white;
             font-family: $font-fancy;
             font-weight: 500;
             font-size: 2.5em;
@@ -395,19 +403,17 @@ footer.footer-menu{
                 list-style-type: none;
                 text-decoration: none;
                 justify-content: left;
-                padding: 0;
-                padding-top: 1em;
+                padding: 1em 0;
                 li{
                     list-style-type: none;
                     text-decoration: none;
                     justify-content: left;
-                    padding-top: 1rem;
-                    padding-bottom: 1rem;
+                    padding: 1rem 0;
                     a{
                         list-style-type: none;
                         text-decoration: none;
                         text-align: left;
-                        padding: 0px;
+                        padding: 0;
                     }
                 }
             }
@@ -568,7 +574,7 @@ footer.footer-menu{
 
     .inside-menu-open{
         position: relative;
-        display: inline-block;
+        display: block;
     }
 
     .nav-breaker{
@@ -583,6 +589,11 @@ footer.footer-menu{
 
     #toggle:checked {
         display: none;
+    }
+
+    .intro-section{
+        background-position: 40% 50%;
+        background-size: 350%;
     }
 
     .section-2{
@@ -666,14 +677,18 @@ footer.footer-menu{
             li{
                 .footer-logo{
                     position: inherit;
-                    padding: 0;
+                    padding: 1rem 0;
                 }
                 margin: auto;
-                padding: 1em;
+                padding: 0;
                 ul{
                     margin: auto;
                     padding-top: 1em;
                     opacity: 50%;
+                    li{
+                        padding: 0;
+                        line-height: 2rem;
+                    }
                 }
             }
         }

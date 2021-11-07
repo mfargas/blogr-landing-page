@@ -81,6 +81,12 @@ header{
     }
 ```
 
+```css
+    background-image: 
+        url('../assets/images/bg-pattern-intro.svg'),
+        linear-gradient( 90deg ,hsl(13, 100%, 72%), hsl(353, 100%, 62%) 80%);
+```
+
 #### JavaScript
 
 I've already grown accustomed to media queries in CSS/SASS, yet the question of 'How to implement media queries in JS' popped up for me. This is how I chose to add event listeners for menu togglers within the burger menu.
