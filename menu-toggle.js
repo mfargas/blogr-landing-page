@@ -19,6 +19,15 @@ function handleScreenResize(e){
             childEl.addEventListener('click', () => {
                 matchingSub.style.display = matchingSub.style.display == 'none' ? 'grid' : 'none';
         })}
+    }else{
+        for(let i = 0; i < mobileSub.length; i++) {
+            let childEl = mobileSub[i];
+            let matchingSub = subNav[i];
+            childEl.addEventListener('click', () => {
+                matchingSub.style.display = matchingSub.style.display == 'none' ? 'grid' : 'none';
+                matchingSub.style.color = 'black'
+            })
+        }
     }
 }
 

@@ -139,13 +139,6 @@ header nav ul .nav-toggle-link {
   position: relative;
 }
 
-header nav ul .nav-toggle-link:focus-within ul {
-  display: block;
-  position: absolute;
-  background-color: white;
-  border-radius: 5px;
-}
-
 header nav ul .nav-toggle-link a {
   display: block;
   height: 100%;
@@ -173,6 +166,7 @@ header nav ul .nav-toggle-link .inside-menu li {
 header nav ul .nav-toggle-link .inside-menu li a {
   padding: 2px;
   text-align: left;
+  color: #4b5862;
 }
 
 header nav ul .nav-toggle-link .account-action {
@@ -626,7 +620,7 @@ footer.footer-menu ul li ul li a {
     height: -moz-max-content;
     height: max-content;
     width: 100%;
-    font-size: 1em;
+    font-size: 1rem;
     z-index: 7;
     margin: auto;
     text-align: center;
@@ -656,6 +650,7 @@ footer.footer-menu ul li ul li a {
     -webkit-box-pack: normal;
         -ms-flex-pack: normal;
             justify-content: normal;
+    opacity: 75%;
   }
   header nav ul .nav-toggle-link .inside-menu li {
     text-align: center;
@@ -663,6 +658,8 @@ footer.footer-menu ul li ul li a {
   }
   header nav ul .nav-toggle-link .inside-menu li a {
     color: #1f3f5b;
+    font-size: 1rem;
+    line-height: 2rem;
   }
   header nav ul .nav-toggle-link .subMenuShow {
     display: table;

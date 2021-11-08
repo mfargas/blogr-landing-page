@@ -103,14 +103,6 @@ header{
                 height: max-content;
                 list-style-type: none;
                 position: relative;
-                &:focus-within{
-                    ul{
-                        display: block;
-                        position: absolute;
-                        background-color: $white;
-                        border-radius: 5px;
-                    }
-                }
                 a{
                     display: block;
                     height: 100%;
@@ -133,6 +125,7 @@ header{
                         a{
                             padding: 2px;
                             text-align: left;
+                            color: $dark-smoke;
                         }
                     }
                 }
@@ -495,7 +488,7 @@ footer.footer-menu{
                     flex-direction: column;
                     height: max-content;
                     width: 100%;
-                    font-size: 1em;
+                    font-size: 1rem;
                     z-index: 7;
                     margin: auto;
                     text-align: center;
@@ -517,11 +510,14 @@ footer.footer-menu{
                         width: 90%;
                         margin: auto;
                         justify-content: normal;
+                        opacity: 75%;
                         li{
                             text-align: center;
                             margin: auto;
                             a{
                                 color: $dark-indigo;
+                                font-size: 1rem;
+                                line-height: 2rem;
                             }
                         }
                     }
