@@ -158,6 +158,7 @@ header nav ul .nav-toggle-link .inside-menu {
   display: none;
   padding: 10px;
   position: absolute;
+  color: #4b5862;
   background-color: white;
   border-radius: 5px;
   margin-top: 5px;
@@ -166,6 +167,7 @@ header nav ul .nav-toggle-link .inside-menu {
 header nav ul .nav-toggle-link .inside-menu li {
   width: 100px;
   font-size: 10px;
+  color: #4b5862;
 }
 
 header nav ul .nav-toggle-link .inside-menu li a {
@@ -351,6 +353,10 @@ header nav ul .nav-toggle-link .account-action .nav-btn-signup button:hover {
   color: #1f3f5b;
 }
 
+.section-2 .section-2-content .left-side-s2 p {
+  opacity: 75%;
+}
+
 .section-2 .section-2-content img {
   width: 50vw;
   margin-right: -35%;
@@ -397,6 +403,7 @@ header nav ul .nav-toggle-link .account-action .nav-btn-signup button:hover {
 
 .section-3 .s3-text p {
   max-width: 36rem;
+  opacity: 75%;
 }
 
 .section-4 {
@@ -470,6 +477,7 @@ footer.footer-menu ul {
           justify-content: space-evenly;
   font-size: 1em;
   width: 100%;
+  padding: 3rem 0 0 0;
 }
 
 footer.footer-menu ul .footer-logo {
@@ -477,7 +485,10 @@ footer.footer-menu ul .footer-logo {
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
   font-size: 2.5em;
-  position: absolute;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  margin: 0 0 3rem 0;
 }
 
 footer.footer-menu ul .footer-logo a {
@@ -487,9 +498,8 @@ footer.footer-menu ul .footer-logo a {
 footer.footer-menu ul li {
   list-style-type: none;
   text-decoration: none;
-  padding-top: 4em;
-  padding-bottom: 1rem;
-  font-size: 1em;
+  padding: 1rem 0;
+  font-size: 0.75rem;
   -webkit-box-pack: stretch;
       -ms-flex-pack: stretch;
           justify-content: stretch;
@@ -510,7 +520,7 @@ footer.footer-menu ul li ul {
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
-  padding: 1em 0;
+  padding: 1rem 0;
 }
 
 footer.footer-menu ul li ul li {
@@ -519,7 +529,8 @@ footer.footer-menu ul li ul li {
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
+  opacity: 75%;
 }
 
 footer.footer-menu ul li ul li a {
@@ -614,7 +625,7 @@ footer.footer-menu ul li ul li a {
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
-    width: 90%;
+    width: 100%;
     font-size: 1em;
     z-index: 7;
     margin: auto;
@@ -627,6 +638,9 @@ footer.footer-menu ul li ul li a {
     display: -ms-flexbox;
     display: flex;
   }
+  header nav ul .nav-toggle-link svg {
+    width: 100%;
+  }
   header nav ul .nav-toggle-link .inside-menu {
     display: none;
     position: inherit;
@@ -636,11 +650,12 @@ footer.footer-menu ul li ul li a {
             flex-direction: column;
     background-color: #c8c8cb;
     color: #1f3f5b;
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
+    height: 100%;
     width: 90%;
     margin: auto;
+    -webkit-box-pack: normal;
+        -ms-flex-pack: normal;
+            justify-content: normal;
   }
   header nav ul .nav-toggle-link .inside-menu li {
     text-align: center;
@@ -829,13 +844,20 @@ footer.footer-menu ul li ul li a {
     padding: 1rem 0;
     margin: auto;
   }
-  footer.footer-menu ul li {
-    margin: auto;
+  footer.footer-menu ul .footer-logo {
+    margin: 3rem auto 3rem auto;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  footer.footer-menu ul .footer-logo a {
+    position: inherit;
     padding: 0;
   }
-  footer.footer-menu ul li .footer-logo {
-    position: inherit;
+  footer.footer-menu ul li {
+    margin: auto;
     padding: 1rem 0;
+    font-size: 1rem;
   }
   footer.footer-menu ul li ul {
     margin: auto;

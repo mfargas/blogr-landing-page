@@ -122,12 +122,14 @@ header{
                     display: none;
                     padding: 10px;
                     position: absolute;
+                    color: $dark-smoke;
                     background-color: white;
                     border-radius: 5px;
                     margin-top: 5px;
                     li{
                         width: 100px;
                         font-size: 10px;
+                        color: $dark-smoke;
                         a{
                             padding: 2px;
                             text-align: left;
@@ -290,6 +292,9 @@ header{
                 padding-bottom: 1rem;
                 color: $dark-indigo;
             }
+            p{
+                opacity: 75%;
+            }
         }
         img{
             width: 50vw;
@@ -325,6 +330,7 @@ header{
         }
         p{
             max-width: 36rem;
+            opacity: 75%;
         }
     } 
 }
@@ -377,12 +383,14 @@ footer.footer-menu{
         justify-content: space-evenly;
         font-size: 1em;
         width: 100%;
+        padding: 3rem 0 0 0 ;
         .footer-logo{
             color: $white;
             font-family: $font-fancy;
             font-weight: 500;
             font-size: 2.5em;
-            position: absolute;
+            align-self: start;
+            margin: 0 0 3rem 0;
             a{
                 font-family: $font-fancy;
             }
@@ -390,9 +398,8 @@ footer.footer-menu{
         li{
             list-style-type: none;
             text-decoration: none;
-            padding-top: 4em;
-            padding-bottom: 1rem;
-            font-size: 1em;
+            padding: 1rem 0;
+            font-size: 0.75rem;
             justify-content: stretch;
             a{
                 list-style-type: none;
@@ -403,12 +410,13 @@ footer.footer-menu{
                 list-style-type: none;
                 text-decoration: none;
                 justify-content: left;
-                padding: 1em 0;
+                padding: 1rem 0;
                 li{
                     list-style-type: none;
                     text-decoration: none;
                     justify-content: left;
-                    padding: 1rem 0;
+                    padding: 0.5rem 0;
+                    opacity: 75%;
                     a{
                         list-style-type: none;
                         text-decoration: none;
@@ -486,7 +494,7 @@ footer.footer-menu{
                 .nav-toggle-link{
                     flex-direction: column;
                     height: max-content;
-                    width: 90%;
+                    width: 100%;
                     font-size: 1em;
                     z-index: 7;
                     margin: auto;
@@ -496,15 +504,19 @@ footer.footer-menu{
                         color: $dark-indigo;
                         display: flex;
                     }
+                    svg{
+                        width: 100%;
+                    }
                     .inside-menu{
                         display: none;
                         position: inherit;
                         flex-direction: column;
                         background-color: $grey-blue;
                         color: $dark-indigo;
-                        height: max-content;
+                        height: 100%;
                         width: 90%;
                         margin: auto;
+                        justify-content: normal;
                         li{
                             text-align: center;
                             margin: auto;
@@ -674,13 +686,18 @@ footer.footer-menu{
             text-align: center;
             padding: 1rem 0;
             margin: auto;
-            li{
-                .footer-logo{
-                    position: inherit;
-                    padding: 1rem 0;
+            .footer-logo{
+                    margin: 3rem auto 3rem auto;
+                    align-self: center;
+                    a{
+                        position: inherit;
+                        padding: 0;
+                    }
                 }
+            li{
                 margin: auto;
-                padding: 0;
+                padding: 1rem 0;
+                font-size: 1rem;
                 ul{
                     margin: auto;
                     padding-top: 1em;

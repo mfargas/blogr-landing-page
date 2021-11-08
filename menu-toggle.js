@@ -5,7 +5,7 @@ const mediaQueryMobile = window.matchMedia('(max-width: 425px)')
 
 const mobileMenu = document.querySelector(".burger-input");
 const nav = document.querySelector(".navbar-left");
-const mobileSub = document.getElementsByClassName("dropdown");
+const mobileSub = document.getElementsByClassName("nav-toggle-link");
 const subNav = document.getElementsByClassName("inside-menu");
 
 function handleScreenResize(e){
